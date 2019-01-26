@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<HTML><HEAD><TITLE>weboffice演示页面</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=utf-8"><LINK 
+href="style.css" type=text/css rel=stylesheet>
+<SCRIPT src="./main.js" type=text/javascript></SCRIPT>
+<!-- --------------------=== 调用Weboffice初始化方法 ===--------------------- -->
+<SCRIPT language=javascript event=NotifyCtrlReady for=WebOffice1>
+/****************************************************
+*
+*	在装载完Weboffice(执行<object>...</object>)
+*	控件后执行 "WebOffice1_NotifyCtrlReady"方法
+*
+****************************************************/
+  //  WebOffice_Event_Flash("NotifyCtrlReady");
+	WebOffice1_NotifyCtrlReady()
+</SCRIPT>
+
+<SCRIPT language=javascript event=NotifyWordEvent(eventname) for=WebOffice1>
+WebOffice1_NotifyWordEvent(eventname);
+</SCRIPT>
+
+<SCRIPT language=javascript event=NotifyToolBarClick(iIndex) for=WebOffice1>
+WebOffice1_NotifyToolBarClick(iIndex);
+</SCRIPT>
+
+<SCRIPT language=javascript>
+/****************************************************
+*
+*		控件初始化WebOffice方法
+*
+****************************************************/
+function WebOffice1_NotifyCtrlReady() {
+//	document.all.WebOffice1.SetWindowText("授权XX(可通过接口自定义)", 0);
+	document.all.WebOffice1.OptionFlag |= 128;
+	// 新建文档
+	document.all.WebOffice1.LoadOriginalFile("E:/广州农行/省营Ipad社保项目/需求/省银ipad项目/保险营销话术20131202.doc", "doc");//直接打开word文件
+	document.all.WebOffice1.SetSecurity(0x02 + 0x8000);//允许保存
+	document.all.WebOffice1.SetTrackRevisions(1);//修订文档,即修改留下痕迹
+	document.all.WebOffice1.SetTrackRevisions(4);//显示修改痕迹
+	document.all.WebOffice1.SetCustomToolBtn(0,'保存文档');//自定义保存按钮
+	document.all.WebOffice1.SetCustomToolBtn(1,'复核文档');//自定义复核按钮
+}
+var flag=false;
+function menuOnClick(id){
+	var id=document.getElementById(id);
+	var dis=id.style.display;
+	if(dis!="none"){
+		id.style.display="none";
+		
+	}else{
+		id.style.display="block";
+	}
+}
+/****************************************************
+*
+*		接收office事件处理方法
+*
+****************************************************/
+var vNoCopy = 0;
+var vNoPrint = 0;
+var vNoSave = 0;
+var vClose=0;
+function no_copy(){
+	vNoCopy = 1;
+}
+function yes_copy(){
+	vNoCopy = 0;
+}
+
+
+function no_print(){
+	vNoPrint = 1;
+}
+function yes_print(){
+	vNoPrint = 0;
+}
+
+
+function no_save(){
+	vNoSave = 1;
+}
+function yes_save(){
+	vNoSave = 0;
+}
+function EnableClose(flag){
+ vClose=flag;
+}
+function CloseWord(){
+	
+  document.all.WebOffice1.CloseDoc(0); 
+}
+
+function WebOffice1_NotifyWordEvent(eventname) {
+	if(eventname=="DocumentBeforeSave"){
+		if(vNoSave){
+			document.all.WebOffice1.lContinue = 0;
+			alert("此文档已经禁止保存");
+		}else{
+			document.all.WebOffice1.lContinue = 1;
+		}
+	}else if(eventname=="DocumentBeforePrint"){
+		if(vNoPrint){
+			document.all.WebOffice1.lContinue = 0;
+			alert("此文档已经禁止打印");
+		}else{
+			document.all.WebOffice1.lContinue = 1;
+		}
+	}else if(eventname=="WindowSelectionChange"){
+		if(vNoCopy){
+			document.all.WebOffice1.lContinue = 0;
+			//alert("此文档已经禁止复制");
+		}else{
+			document.all.WebOffice1.lContinue = 1;
+		}
+	}else   if(eventname =="DocumentBeforeClose"){
+	    if(vClose==0){
+	    	document.all.WebOffice1.lContinue=0;
+	    } else{
+	    	//alert("word");
+		    document.all.WebOffice1.lContinue = 1;
+		  }
+ }
+	//alert(eventname); 
+}
+</SCRIPT>
+<LINK href="../css/style.css" type=text/css rel=stylesheet>
+<META content="MSHTML 6.00.2900.5921" name=GENERATOR></HEAD>
+<BODY style="BACKGROUND: #ccc" onunload="return window_onunload()">
+<CENTER>
+<DIV 
+style="PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BACKGROUND: #fff; PADDING-BOTTOM: 0px; MARGIN: -10px 0px 0px; WIDTH: 1024px; PADDING-TOP: 10px; HEIGHT: 750px" 
+align=center>
+<FORM name=myform>
+<TABLE class=TableBlock width="90%">
+  <TBODY>
+  <TR class=TableHeader>
+    <TD colSpan=2 valign=middle>
+      <font size=3> 营销话术编辑界面</font></TD></TR>
+</TBODY></TABLE><BR>
+<TABLE class=TableBlock width="90%">
+  <TBODY>
+  <TR>
+    <TD class=TableData vAlign=top width="85%">
+    	<!-- -----------------------------== 装载weboffice控件 ==--------------------------------- -->
+      <SCRIPT src="LoadWebOffice.js"></SCRIPT>
+			<!-- --------------------------------== 结束装载控件 ==----------------------------------- -->
+			</TD></TR></TBODY></TABLE></FORM></DIV></CENTER></BODY></HTML>

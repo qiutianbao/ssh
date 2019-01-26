@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<!-- 
+    20160125
+-->
+
+<hibernate-mapping>
+	<class name="com.yinli.item.vo.Sysmessage" table="sysmessage">
+		<id name="idNumber" type="java.lang.Integer">
+			<column name="idNumber" />
+			<generator class="native" />
+		</id>
+		<property name="msgtitle" type="java.lang.String">
+			<column name="msgtitle" />
+		</property>
+		<property name="releasetime" type="java.util.Date">
+			<column name="releasetime" />
+		</property>
+		
+		<property name="msgtype" type="java.lang.String">
+			<column name="msgtype" />
+		</property>
+		<property name="ts" type="java.lang.String">
+			<column name="ts" />
+		</property>
+		<property name="dr" type="java.lang.Integer">
+			<column name="dr" />
+		</property>
+		
+		<property name="msgimgname" type="java.lang.String">
+			<column name="msgimgname" />
+		</property>
+		
+		<property name="back2" type="java.lang.String">
+			<column name="back2" />
+		</property>
+		<property name="back3" type="java.lang.Double">
+			<column name="back3" />
+		</property>
+	</class>
+</hibernate-mapping>

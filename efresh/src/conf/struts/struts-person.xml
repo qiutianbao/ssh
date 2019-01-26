@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+	<package name="Person" namespace="/" extends="authority">
+		<action name="positionNameInfo_*" class="positionNameInfoAction" method="{1}">
+			<result type="json"></result>
+		</action>
+		<action name="applicaReason_*" class="applicaReasonAction" method ="{1}">
+			<result type="json"></result>
+		</action>
+		<action name="personelInfo_*" class="personelInfoAction" method="{1}">
+			<result type="json"></result>
+		</action>
+		<action name="position_*" class="positionInfoAction" method="{1}">
+			<result type="json"></result>
+		</action>
+		<action name="applicationAudit_*" class="applicationAuditAction" method="{1}">
+			<result type="json"></result>
+		</action>
+		<action name="applicationInfo_*" class="applicationInfoAction" method="{1}">
+			<result type="json"></result>
+		</action>
+		<action name="academic_*" class="academicInfoAction" method="{1}">
+			<result type="json"></result>
+		</action>
+		
+		<action name="getNewMessage_*" class="messageManageAction" method="{1}">
+			<result type="json"></result>
+		</action>
+	</package>
+</struts>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+	<package name="storage" namespace="/" extends="authority">
+		<action name="storage_*" class="storageAction" method="{1}">
+			<result type="json"></result>
+		</action>
+	</package>
+	
+	<package name="storages" namespace="/" extends="authority">
+		<action name="storages_*" class = "storageAction" method="{1}">
+			<result name = "success">/jsp/esys/ckckd.jsp</result>
+			<result name = "add">/jsp/esys/ckddetail.jsp</result>
+			   <result name="listAction" type="redirectAction">  
+        			 storages_findByIds?idStoragebills=${idNumber}
+   			   </result> 
+		</action>
+	</package>
+</struts>

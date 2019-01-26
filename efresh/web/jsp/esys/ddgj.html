@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>订单归集</title>
+		<link rel="stylesheet" href="../../css/esys/iframe_style.css" />
+		<link rel="stylesheet" href="../../css/esys/login.css" />
+		<link rel="stylesheet" href="../../css/esys/bootstrap.min.css" />
+		<script type="text/javascript" src="../../script/esys/jquery1.10.2.min.js"></script>
+	</head>
+
+	<body bgcolor="transparent" style='background:transparent'>
+
+		<div class="iframe_main2">
+
+			<div class="iframe_wrap">
+				<div class="avenue">  
+                <div class="latgbox">
+                    <div class="timebox float_l">
+					<p class="cktitle float_l armistice">时间区间：</p>
+				    <div class="casual">
+						<input type="text" class="carpet gemay ddb" id="xdstart" readonly>
+						<span class="chamber"><img src="../../images/esys/013.png"></span>
+					</div>
+					<p class="jsx"><img src="../../images/esys/shx.png"></p>
+
+					<div class="casual">
+						<input type="text" class="carpet gemay ddb" id="xdend" readonly>
+						<span class="chamber"><img src="../../images/esys/013.png"></span>
+					</div>
+                     </div>
+                    </div>
+					<button class="btn showdown">重置</button>
+					<button class="btn committee">新增一个</button>
+					<button class="btn mushroom">确认归集</button>
+
+					<div class="clear"></div>
+				</div>
+				<div class="clear"></div>
+				<div style="height: 10px;"></div>
+
+				<div class="clear"></div>
+
+				<div style="height: 30px;"></div>
+
+				<div class="forces">
+					<table class="table table-bordered" id="cargolist">
+						<thead>
+							<tr>
+								<th>序号</th>
+								<th>一级订单编号</th>
+								<th>基地</th>
+								<th>联系人</th>
+								<th>联系方式</th>
+								<th>时间区间</th>
+								<th>状态</th>
+								<th>操作</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>01</td>
+								<td>20160214153015</td>
+								<td>南方农贸基地</td>
+								<td>张三</td>
+								<td>13412635415</td>
+								<td>05:30 - 06:30</td>
+								<td>待处理</td>
+								<td>
+									<button class="btn btn-sm thxred">查看</button>
+								</td>
+							</tr>
+							<tr>
+								<td>02</td>
+								<td>20160214153015</td>
+								<td>南方农贸基地</td>
+								<td>张三</td>
+								<td>13412635415</td>
+								<td>05:30 - 06:30</td>
+								<td>待处理</td>
+								<td>
+									<button class="btn btn-sm thxred">查看</button>
+								</td>
+							</tr>
+							<tr>
+								<td>03</td>
+								<td>20160214153015</td>
+								<td>南方农贸基地</td>
+								<td>张三</td>
+								<td>13412635415</td>
+								<td>05:30 - 06:30</td>
+								<td>待处理</td>
+								<td>
+									<button class="btn btn-sm thxred">查看</button>
+								</td>
+							</tr>
+							<tr>
+								<td>04</td>
+								<td>20160214153015</td>
+								<td>南方农贸基地</td>
+								<td>张三</td>
+								<td>13412635415</td>
+								<td>05:30 - 06:30</td>
+								<td>待处理</td>
+								<td>
+									<button class="btn btn-sm thxred">查看</button>
+								</td>
+							</tr>
+						</tbody>
+
+					</table>
+					<div class="measures">
+						<span class="fomnr">共40条记录，每页显示20条</span>
+						<ul class="pager agenda">
+							<li><a href="#">上一页</a></li>
+							<li><a href="#">下一页</a></li>
+						</ul>
+					</div>
+				</div>
+
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	</body>
+<script type="text/javascript" src="../../script/esys/laydate.js"></script> 
+<script type="text/javascript">
+!function(){
+	laydate.skin('molv');//切换皮肤，请查看skins下面皮肤库
+}();
+var _index=0;
+$(function(){
+	$('.committee').on('click',function(){
+			_index+=1;
+		var _latgbox=$('.latgbox');
+		var _hasyHtml='<div class="timebox float_l"><p class="cktitle float_l armistice">时间区间：</p><div class="casual"><input type="text" class="carpet gemay ddb" id="xdstart" readonly><span class="chamber"><img src="../../images/esys/013.png"></span></div><p class="jsx"><img src="../../images/esys/shx.png"></p><div class="casual"><input type="text" class="carpet gemay ddb" id="xdend" readonly><span class="chamber"><img src="../../images/esys/013.png"></span></div></div>';
+		$(_hasyHtml).appendTo(_latgbox);
+		if(_index==1){
+		$('.latgbox').width(1000);
+		}else{
+		$('.latgbox').width(500);	
+			}
+		});						
+$('.latgbox').on('click','.ddb',function(){
+		laydate({istime: true,format:'YYYY/MM/DD hh:mm:ss'})
+	})	
+})
+</script>
+</html>

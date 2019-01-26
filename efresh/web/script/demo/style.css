@@ -1,0 +1,151 @@
+@charset "utf-8";
+/*by Denglh 2011-01-27*/
+html,body{ height: 100%; }
+body {
+		font: 12px 'Microsoft Yahei',arial,SimSun,sans-serif;
+		margin: 0 auto;
+		padding: 0px;
+		text-align: center;
+		color: #333;
+		background: url(bg.jpg) center top no-repeat fixed;
+}
+h1,h2,h3,h4,h5,h6,div,p,ul,ol,dl,dd,dt,abbr,form,input,img { margin: 0; padding: 0; }
+img { border: none; display:block; }
+
+h1 { width: 100%; text-align: center; color: #498AA2;}
+h3{ margin: 20px 0;}
+ul{ list-style: none; }
+ol{ margin-left: 30px; }
+blockquote { width: 500px; margin: 10px 0; padding: 10px; border: 2px dashed #ccc; background-color: #eff;}
+table {border-collapse: collapse; border-spacing: 0;} 
+button{ width: 96px; height: 30px; }
+a { color: #096FB7; text-decoration: none; }
+a:hover { text-decoration: underline; }
+.b{ font-weight: bold; }
+
+.wrap {position: relative; margin: 20px auto; width: 600px; background: rgba(0, 0, 0, 0.2);}
+#container { position: relative; left: 20px; top: 20px; padding: 20px; width: 520px; text-align: left; background: rgba(255, 255, 255, 0.85);}
+
+.nav {
+	margin-top: 20px;
+	height: 30px; 
+	line-height: 30px;
+	background: rgba(0, 0, 0, 0.4);
+	border-radius: 3px;
+	font-size: 14px;
+}
+.nav li {
+	float: left;
+}
+.nav li a {
+	display: block;
+	margin: 0 5px;
+	padding: 0 15px;
+	color: #fff;
+}
+
+.content {
+	padding-left: 15px;
+	line-height: 22px;
+}
+
+.api_table td {
+	background: #fff; border: solid 1px #CCCCCC; line-height: 22px; padding-left:10px;
+}
+.show_list li {
+	margin-bottom: 25px;
+}
+.show_list li p {
+	height: 28px;
+	line-height: 28px;
+	border: 1px solid #ccc;
+	color: #228822;
+	font-weight: bold;
+	background: #F8F8F8;
+	margin: 15px 0 10px;
+	padding-left: 10px;
+	border-radius: 3px;
+}
+
+#update-list dt {
+	font-size:14px;
+	font-weight: bold;
+	margin: 10px 0;
+}
+
+.btn_css3_down {
+   cursor: pointer;
+   display: block;
+   font: bold 20px Microsoft YaHei,Arial,sans-serif;
+   width: 150px;
+   margin: 0 auto;
+   padding: 8px 20px;
+   position: relative;
+  	text-align: center;
+   text-decoration: none !important;
+   vertical-align: baseline;
+   white-space: nowrap;
+   
+   -moz-transition: background-position 1s ease 0s;
+   background-clip: border-box;
+   border-radius: 3px 3px 3px 3px;
+   box-shadow: 0 0 1px #FFFFFF inset;
+   text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.4);
+   background-color: #E38D27;
+   background-position: left bottom, right top, 0 0pt, 0 0;
+   background-repeat: no-repeat;
+   background-repeat:no-repeat;
+
+	/* The following two rules are fallbacks, in case
+	   the browser does not support multiple backgrounds. */
+
+	background-position:bottom left;
+	background-image:url('button_bg.png');
+	
+	/* Multiple backgrounds version. The background images
+	   are defined individually in color classes */
+	
+	background-position:bottom left, top right, 0 0, 0 0;
+	background-clip:border-box;
+	
+	
+	/* A 1px highlight inside of the button */
+	
+	-moz-box-shadow:0 0 1px #fff inset;
+	-webkit-box-shadow:0 0 1px #fff inset;
+	box-shadow:0 0 1px #fff inset;
+	
+	/* Animating the background positions with CSS3 */
+	/* Currently works only in Safari/Chrome */
+	
+	-webkit-transition:background-position 1s;
+	-moz-transition:background-position 1s;
+	transition:background-position 1s;
+   color:#0f4b6d !important;
+	border:1px solid #84acc3 !important;
+	background-color: #48b5f2;
+	background-image:	url('button_bg.png'), url('button_bg.png'),
+						-moz-radial-gradient(	center bottom, circle,
+												rgba(89,208,244,1) 0,rgba(89,208,244,0) 100px),
+						-moz-linear-gradient(#4fbbf7, #3faeeb);
+
+	background-image:	url('button_bg.png'), url('button_bg.png'),
+						-webkit-gradient(	radial, 50% 100%, 0, 50% 100%, 100,
+											from(rgba(89,208,244,1)), to(rgba(89,208,244,0))),
+						-webkit-gradient(linear, 0% 0%, 0% 100%, from(#4fbbf7), to(#3faeeb));
+
+}
+.btn_css3_down:hover{
+	background-position:top left;
+	background-position:top left, bottom right, 0 0, 0 0;
+	background-color:#63c7fe;
+	background-image:	url('button_bg.png'), url('button_bg.png'),
+						-moz-radial-gradient(	center bottom, circle,
+												rgba(109,217,250,1) 0,rgba(109,217,250,0) 100px),
+						-moz-linear-gradient(#63c7fe, #58bef7);
+						
+	background-image:	url('button_bg.png'), url('button_bg.png'),
+						-webkit-gradient(	radial, 50% 100%, 0, 50% 100%, 100,
+											from(rgba(109,217,250,1)), to(rgba(109,217,250,0))),
+						-webkit-gradient(linear, 0% 0%, 0% 100%, from(#63c7fe), to(#58bef7));
+						}

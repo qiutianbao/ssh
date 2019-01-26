@@ -1,0 +1,115 @@
+/*
+ *
+ *
+ * 创建日期: 2013-10-25
+ */
+package com.yinli.item.service.impl;
+
+import com.yinli.item.service.I##tableName##Service;
+import plantix.core.business.exception.BusinessException;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.transaction.annotation.Isolation;
+import java.util.List;
+import java.util.ArrayList;
+import com.yinli.item.vo.##tableName##VO;
+import com.yinli.item.dao.##tableName##DAO;
+
+/**
+ * ##tableName##Service
+ * @generated
+ */
+public class ##tableName##ServiceImpl implements I##tableName##Service {
+
+	/**
+	 * ##tableName##DAO
+	 * @generated
+	 */
+	private ##tableName##DAO ##tableName_val##DAO;
+
+	/**
+	 * 获取##tableName##DAO
+	 * @return ##tableName##DAO
+	 * @generated
+	 */
+	public ##tableName##DAO get##tableName##DAO() {
+		return ##tableName##DAO;
+	}
+
+	/**
+	 * 设置##tableName##DAO
+	 * @param  ##tableName##DAO
+	 * @generated
+	 */
+	public void set##tableName##DAO(##tableName##DAO ##tableName_val##DAO) {
+		this.##tableName_val##DAO = ##tableName_val##DAO;
+	}
+
+	/**
+	 *根据主键查询
+	 * @generated
+	 */
+	public ##tableName##VO find##tableName##ByKey(##tableName##VO ##tableName_val##VO) throws BusinessException {
+		return ##tableName_val##DAO.find##tableName##ByKey(##tableName_val##VO);
+	}
+
+	/**
+	 *根据主键删除一条数据
+	 * @generated
+	 */
+	@Transactional(isolation = Isolation.READ_UNCOMMITTED)
+	public int delete##tableName##ByKey(##tableName##VO ##tableName_val##VO) throws BusinessException {
+		return ##tableName_val##DAO.delete##tableName##ByKey(##tableName_val##VO);
+	}
+
+	/**
+	 *删除
+	 * @generated
+	 */
+	@Transactional(isolation = Isolation.READ_UNCOMMITTED)
+	public void delete##tableName##(##tableName##VO[] ids) throws BusinessException {
+		if (ids != null) {
+			for (##tableName##VO id : ids) {
+				if (##tableName_val##DAO.delete##tableName##ByKey(id) != 1) {
+					throw new BusinessException("删除##tableName_val##信息:" + id.toString()
+							+ "失败!");
+				}
+			}
+		} else {
+			throw new BusinessException("请选择需要删除的数据！");
+		}
+	}
+
+	/**
+	 *查询所有数据
+	 * @generated
+	 */
+	public List<##tableName##VO> findAll##tableName##() throws BusinessException {
+		return ##tableName_val##DAO.findAll##tableName##();
+	}
+
+	/**
+	 *根据条件查询数据
+	 * @generated
+	 */
+	public List<##tableName##VO> find##tableName##ByWhere(##tableName##VO ##tableName_val##VO) throws BusinessException {
+		return ##tableName_val##DAO.find##tableName##ByWhere(##tableName_val##VO);
+	}
+
+	/**
+	 *插入一条数据
+	 * @generated
+	 */
+	@Transactional(isolation = Isolation.READ_UNCOMMITTED)
+	public void insert##tableName##(##tableName##VO ##tableName_val##VO) throws BusinessException {
+		##tableName##DAO.insert##tableName##(##tableName_val##VO);
+	}
+
+	/**
+	 *更新一条数据
+	 * @generated
+	 */
+	@Transactional(isolation = Isolation.READ_UNCOMMITTED)
+	public int update##tableName##(##tableName##VO ##tableName_val##VO) throws BusinessException {
+		return ##tableName##DAO.update##tableName##(##tableName_val##VO);
+	}
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>入库单</title>
+		<link rel="stylesheet" href="../css/iframe_style.css" />
+		<link rel="stylesheet" href="../css/login.css" />
+		<link rel="stylesheet" href="../css/bootstrap.min.css" />
+		<script type="text/javascript" src="../js/jquery1.10.2.min.js"></script>
+		<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+	</head>
+	<body bgcolor="transparent" style='background:transparent'>
+
+		<div class="iframe_main2">
+
+			<div class="iframe_wrap">
+         <div class="claw">
+				<strong class="cktitle float_l">入库单号：</strong>
+				<div class="cliff">2016012015301256</div>	
+			</div>
+      <div class="claw">
+				<strong class="cktitle float_l marl30">入库时间：</strong>
+				<div class="cliff">2016-01-20  13:30</div>	
+			</div>
+			<div class="claw">
+				<strong class="cktitle float_l marl30">基地：</strong>
+				<div class="cliff">南方农贸基地</div>	
+			</div>
+			<div class="claw">
+				<strong class="cktitle float_l marl30">经办人：</strong>
+				<div class="cliff">赵某某</div>	
+			</div>
+
+				<div class="clear"></div>
+
+			<div style="height: 30px;"></div>	
+			<table class="table table-bordered" id="cargo">
+					<thead>
+						<tr>
+							<th>序号</th>
+							<th>商品编码</th>
+							<th>商品名称</th>
+							<th>数量</th>
+							<th>规格</th>
+							<th>单价</th>
+							<th>重量</th>
+							<th>单位</th>
+							<th>金额</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>01</td>
+							<td>YCL1516633</td>
+							<td>大白菜</td>
+							<td>5</td>
+							<td>箱</td>
+							<td>200</td>
+							<td>100</td>
+							<td>kg</td>
+							<td>1000</td>
+						</tr>
+						<tr>
+							<td>02</td>
+							<td>YCL1516633</td>
+							<td>大白菜</td>
+							<td>5</td>
+							<td>箱</td>
+							<td>200</td>
+							<td>100</td>
+							<td>kg</td>
+							<td>1000</td>
+						</tr>
+						<tr>
+							<td>03</td>
+							<td>YCL1516633</td>
+							<td>大白菜</td>
+							<td>5</td>
+							<td>箱</td>
+							<td>200</td>
+							<td>100</td>
+							<td>kg</td>
+							<td>1000</td>
+							
+							
+						</tr>
+						<tr>
+							<td colspan="9">
+                             <div class="economic" style="padding: 5px 20px;">
+                             	<span class="amount">金额总计：</span>
+                             	<span class="all_amount">￥10880.00元</span>
+                             	<div style="clear: both;"></div>
+                             </div>							
+							</td>
+						</tr>
+					</tbody>
+
+				</table>
+		
+		
+				
+				
+				
+				
+				
+				
+			</div>
+<div class="clear"></div>
+		</div>
+
+	</body>
+	<script type="text/javascript">
+		$(function(){
+		   	var _clasp=$('.clasp');
+		   	_clasp.on('click',function(){
+		   	$('.bronze').show();		
+		   	})
+		   	$('.bronze span').on('click',function(){
+		   	var _this=$(this);
+		   	//alert(_this.text());
+		   	$('.gtf_txt').text(_this.text());
+		   	$('.bronze').hide();
+		   	return false;
+		   	})
+		   })
+	</script>
+
+</html>

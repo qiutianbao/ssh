@@ -1,0 +1,26 @@
+.bison-left{width:210px;float: left;/*background:url(../images/002.png) repeat-y;*/height:548px}
+.biscuit{float: left;height:50px;padding:20px 0 20px 20px;width:190px;border-bottom: 1px #e8a12e solid;}
+.biscuit span{font-size:20px;color: #e8a12e;line-height:50px;}
+.logo{float: left;width:50px;height:50px;-webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%;overflow: hidden;}
+.birthplace{width:210px;float: left;}
+.birthplace>ul>li{width:210px;line-height:48px;position: relative;z-index: 20;}
+.birthplace>ul>li>a{display: block;font-size:16px;padding-left:50px;width:160px;}
+
+.beggar{width:128px;margin-left:82px;display: none;}
+.beggar a{font-size:16px;color: #323232;display: block;line-height:40px;}
+.beggar a.checkLink{color: #e8a12e;}
+.onx{width:358px;height:79px;position: absolute;left: 0px;top: 0px;background: red;}
+.birthplace>ul>li>a .ileft{background:url(../../images/esys/004.png) left center no-repeat;width: 20px;height:48px;background-position-y:13px;float: left;display: block;}
+.ampere{width:210px;float: left;}
+.birthplace>ul>li>a>span{display: block;float: left;margin: 0 12px;color: #323232;}
+.birthplace>ul>li>a .bent{background:url(../../images/esys/005.png) left center no-repeat;width: 24px;height:48px;background-position-y:14px;float: left;display: block;}
+.birthplace>ul>li>a .irig{background: url(../../images/esys/down.png) right center no-repeat;width: 14px;height:48px;display: block;float: left;background-position-y:22px;}
+.birthplace>ul>li>a .bench{background: url(../../images/esys/006.png) left center no-repeat;width:20px;height:48px;background-position-y:14px;float: left;display: block;}
+.birthplace>ul>li>a .belt{background: url(../../images/esys/007.png) left center no-repeat;width:16px;height:48px;background-position-y:13px;float: left;display: block;padding-left: 4px;}
+.birthplace>ul>li>a .below{background: url(../../images/esys/008.png) left center no-repeat;width:20px;height:48px;background-position-y:17px;float: left;display: block;}
+.birthplace>ul>li>a .belief{background: url(../../images/esys/009.png) left center no-repeat;width:20px;height:48px;background-position-y:14px;float: left;display: block;}
+.birthplace>ul>li>a.adjust{background: #ffe48c;}
+.birthplace>ul>li>a .appoint{background: url(../../images/esys/010.png) left center no-repeat;width: 20px;height:48px;background-position-y:14px;float: left;display: block;}
+.birthplace>ul>li>a .arrival{background: url(../../images/esys/011.png) left center no-repeat;width: 20px;height:48px;background-position-y:14px;float: left;display: block;}
+.birthplace>ul>li>a .astonish{background: url(../../images/esys/012.png) left center no-repeat;width: 20px;height:48px;background-position-y:14px;float: left;display: block;}
+.birthplace>ul>li.attempt{border-bottom: 1px #e8a12e solid;}

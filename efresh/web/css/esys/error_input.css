@@ -1,0 +1,9 @@
+.error_input{
+    color: red;
+    line-height: 50px;
+    /* display: block; */
+    /* height: 42px; */
+    float: left;
+    /* display: block; */
+    margin-left: 5px;
+}

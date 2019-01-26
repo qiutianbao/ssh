@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>出库单查看详情</title>
+<link rel="stylesheet" href="../../css/esys/iframe_style.css" />
+<link rel="stylesheet" href="../../css/esys/login.css" />
+<link rel="stylesheet" href="../../css/esys/bootstrap.min.css" />
+<script type="text/javascript" src="../../script/esys/jquery1.10.2.min.js"></script>
+</head>
+
+<body>
+<div class="sele_main">
+  <table width="100%" border="0" cellpadding="0" cellspacing="0">
+    <tbody>
+      <tr>
+        <td width="15%" align="center">商品名称</td>
+        <td width="35%"><select class="number_select">
+            <option>大白菜1</option>
+            <option>大白菜2</option>
+            <option>大白菜3</option>
+          </select></td>
+        <td width="16%" align="center">数量</td>
+        <td width="34%"><input type="text" class="st_stg" name="gy_number"/><span class="warn_txt"></span></td>
+      </tr>
+      <tr>
+        <td align="center">规格</td>
+        <td><input type="text" class="gg_weight st_stg" name="gy_weight"/><span class="warn_txt"></span></td>
+        <td align="center">单价</td>
+        <td><input type="text" class="only_peice st_stg" name="gy_price"/><span class="warn_txt"></span></td>
+      </tr>
+      <tr>
+        <td align="center">重量</td>
+        <td><input type="text" class="gy_all_weight st_stg" name="gy_allwight"/><span class="warn_txt"></span></td>
+        <td align="center">单位</td>
+        <td><input type="text" class="gy_dw st_stg" name="gy_alldw"/><span class="warn_txt"></span></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td align="center">金额</td>
+        <td><input type="text" readonly class="all_money" name="all_money"/></td>
+      </tr>
+    </tbody>
+  </table>
+  <input  type="button" class="btn  chancel_btnb" value="取消"/>
+  <input type="submit" class="btn  save_btnb" value="保存"/>
+  <div style="clear:both"></div>
+</div>
+
+<script type="text/javascript">
+$(document).ready(function(e) {
+    $('.number_select').change(function(){
+		var _this=$(this);
+		//alert(_this.val())
+		})
+	  var _numberTx=$('input[name="gy_number"]').val();
+	 $('input[type="text"]').blur(function(){
+		 var _this=$(this);
+		 if(_this.val()==""){
+			_this.next('.warn_txt').text('不能为空').css('color','#FF0004');
+			 }
+			 else{
+			_this.next('.warn_txt').text('')	 
+				 }
+		 });
+	$('input[type="submit"]').on('click',function(){
+		//alert($(window.parent.document).find('#cliff').text());
+	if($('input[type="text"]').val()==""){
+		alert('请填写完信息!');
+		}
+		else{
+		var _length=$("#cargo tr").length
+		var _selectVal=$('.number_select').val();
+		var _textVal="";
+		$('input[type="text"]').each(function(index, element) {
+            var _this=$(this);
+			
+			var _result=_this.val();
+			var _i=_length;
+			alert(_result);	
+        });	
+		
+		
+		
+		_i=_i+1;
+			}
+		
+		
+	});
+  $('.chancel_btnb').on('click',function(){
+	  
+	$('.full_window',parent.document).hide();
+		
+	  })	
+	
+});
+
+
+
+
+</script>
+
+
+</body>
+</html>

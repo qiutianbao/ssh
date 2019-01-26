@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<!-- 
+    20131107
+-->
+
+<hibernate-mapping>
+	<class name="com.yinli.item.vo.CompFile" table="t_comp_file" >
+		
+		<id name="idNumber" type="java.lang.String">
+			<column name="idNumber" />
+		</id>
+		<property name="compId" type="java.lang.String">
+			<column name="comp_id" />
+		</property>
+		<property name="fileType" type="java.lang.String">
+			<column name="file_type" />
+		</property>
+		<property name="fileUrl" type="java.lang.String">
+			<column name="file_url" />
+		</property>
+		<property name="sort" type="java.lang.Integer">
+			<column name="sort" />
+		</property>
+		<property name="back1" type="java.lang.String">
+			<column name="back1" />
+		</property>
+		<property name="back2" type="java.lang.String">
+			<column name="back2" />
+		</property>
+		<property name="flag" type="java.lang.String">
+			<column name="flag" />
+		</property>
+				<property name="compversion" type="java.lang.String">
+			<column name="compversion" />
+		</property>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<!-- 
+    20160125
+-->
+
+<hibernate-mapping>
+	<class name="com.yinli.item.vo.Commoditylevel" table="commoditylevel" >
+		<id name="idNumber" type="java.lang.Integer">
+			<column name="idNumber" />
+			<generator class="native" />
+		</id>
+		<property name="levelname" type="java.lang.String">
+			<column name="levelname" />
+		</property>
+		<property name="grossweight" type="java.lang.Double">
+			<column name="grossweight" />
+		</property>
+		
+		<property name="idCommodity" type = "java.lang.Integer">
+			<column name="idCommodity"/>
+		</property>
+		<property name="idCompany" type = "java.lang.Integer">
+			<column name="idCompany"/>
+		</property>
+		<property name="cleanweight" type="java.lang.Double">
+			<column name="cleanweight" />
+		</property>
+		<property name="outerpacking" type="java.lang.String">
+			<column name="outerpacking" />
+		</property>
+		<property name="stock" type="java.lang.Integer">
+			<column name="stock" />
+		</property>
+		<property name="customproperty1" type="java.lang.String">
+			<column name="customproperty1" />
+		</property>
+		<property name="customvalue1" type="java.lang.String">
+			<column name="customvalue1" />
+		</property>
+		<property name="customproperty2" type="java.lang.String">
+			<column name="customproperty2" />
+		</property>
+		<property name="customvalue2" type="java.lang.String">
+			<column name="customvalue2" />
+		</property>
+		<property name="customproperty3" type="java.lang.String">
+			<column name="customproperty3" />
+		</property>
+		<property name="customvalue3" type="java.lang.String">
+			<column name="customvalue3" />
+		</property>
+		<property name="customproperty4" type="java.lang.String">
+			<column name="customproperty4" />
+		</property>
+		<property name="customvalue4" type="java.lang.String">
+			<column name="customvalue4" />
+		</property>
+		<property name="customproperty5" type="java.lang.String">
+			<column name="customproperty5" />
+		</property>
+		<property name="customvalue5" type="java.lang.String">
+			<column name="customvalue5" />
+		</property>
+		<property name="ts" type="java.lang.String">
+			<column name="ts" />
+		</property>
+		<property name="dr" type="java.lang.Integer">
+			<column name="dr" />
+		</property>
+		<property name="back1" type="java.lang.String">
+			<column name="back1" />
+		</property>
+		<property name="back2" type="java.lang.String">
+			<column name="back2" />
+		</property>
+		<property name="back3" type="java.lang.String">
+			<column name="back3" />
+		</property>
+		<property name="back4" type="java.lang.String">
+			<column name="back4" />
+		</property>
+		<property name="back5" type="java.lang.Double">
+			<column name="back5" />
+		</property>
+	</class>
+</hibernate-mapping>

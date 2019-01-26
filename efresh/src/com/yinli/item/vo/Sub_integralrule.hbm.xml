@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<!-- 
+    20160125
+-->
+
+<hibernate-mapping>
+	<class name="com.yinli.item.vo.Sub_integralrule" table="sub_integralrule">
+		<id name="idNumber" type="java.lang.Integer">
+			<column name="idNumber" />
+			<generator class="native" />
+		</id>
+		<property name="idIntegralrule" type="java.lang.Integer">
+			<column name="idIntegralrule" />
+		</property>
+		<property name="title" type="java.lang.String">
+			<column name="title" />
+		</property>
+		<property name="note" type="java.lang.String">
+			<column name="note" />
+		</property>
+		<property name="serial" type="java.lang.Integer">
+			<column name="serial" />
+		</property>
+		<property name="ts" type="java.lang.String">
+			<column name="ts" />
+		</property>
+		<property name="dr" type="java.lang.Integer">
+			<column name="dr" />
+		</property>
+		<property name="back1" type="java.lang.String">
+			<column name="back1" />
+		</property>
+		<property name="back2" type="java.lang.String">
+			<column name="back2" />
+		</property>
+	</class>
+</hibernate-mapping>

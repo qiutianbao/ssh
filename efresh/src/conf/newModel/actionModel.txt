@@ -1,0 +1,215 @@
+/*
+ * 
+ * 
+ *
+ * 创建日期: ##DATE##
+ */
+package com.yinli.item.action;
+
+import java.util.List;
+import plantix.core.PTX_Constant;
+import plantix.core.business.daosupport.page.PageInfo;
+import plantix.core.business.exception.BusinessException;
+import plantix.core.context.ThreadContext;
+import plantix.web.core.action.ext.DynamicGridActionSupport;
+import com.yinli.item.service.I##tableName##Service;
+import com.yinli.item.vo.##tableName##VO;
+
+/**
+ * @generated
+ */
+public class ##tableName##Action extends DynamicGridActionSupport {
+	/**
+	 * ##tableName_val##Service
+	 * @generated
+	 */
+	private I##tableName##Service ##tableName_val##Service;
+
+	/**
+	 * ##tableName_val##VO
+	 * @generated
+	 */
+	private ##tableName##VO ##tableName_val##VO;
+	/**
+	 * ##tableName_val##VOList
+	 * @generated
+	 */
+	private List<##tableName##VO> ##tableName_val##VOList = null;
+	/**
+	 * 分页统计行数 
+	 * @generated
+	 */
+	private int totalRowCount;
+
+	/**
+	 * 用于删除的主键数组
+	 * @generated
+	 */
+	private String[] new_Attribute3;
+
+	/**
+	 * 获取用于删除的主键数组
+	 * @generated
+	 */
+	public String[] getNew_Attribute3() {
+		return new_Attribute3;
+	}
+
+	/**
+	 * 设置用于删除的主键数组
+	 * @generated
+	 */
+	public void setNew_Attribute3(String[] new_Attribute3) {
+		this.new_Attribute3 = new_Attribute3;
+	}
+
+	/**
+	 * 获取分页统计行数
+	 * @generated
+	 */
+	public int getTotalRowCount() {
+		return totalRowCount;
+	}
+
+	/**
+	 * 设置分页统计行数
+	 * @generated
+	 */
+	public void setTotalRowCount(int totalRowCount) {
+		this.totalRowCount = totalRowCount;
+	}
+
+	/**
+	 * 获取##tableName_val##VOList
+	 * @generated
+	 */
+	public List<##tableName##VO> get##tableName##VOList() {
+		return ##tableName_val##VOList;
+	}
+
+	/**
+	 * 设置##tableName_val##VOList
+	 * @generated
+	 */
+	public void set##tableName##VOList(List<##tableName##VO> ##tableName_val##VOList) {
+		this.##tableName_val##VOList = ##tableName_val##VOList;
+	}
+
+	/**
+	 * 获取##tableName_val##Service
+	 * @return ##tableName_val##Service
+	 * @generated
+	 */
+	public I##tableName##Service get##tableName##Service() {
+		return ##tableName_val##Service;
+	}
+
+	/**
+	 * 设置##tableName_val##Service
+	 * @param ##tableName_val##Service
+	 * @generated
+	 */
+	public void set##tableName##Service(I##tableName##Service ##tableName_val##Service) {
+		this.##tableName_val##Service = ##tableName_val##Service;
+	}
+
+	/**
+	 * 获取##tableName_val##VO 
+	 * @return ##tableName_val##VO
+	 * @generated
+	 */
+	public ##tableName##VO get##tableName##VO() {
+		return ##tableName_val##VO;
+	}
+
+	/**
+	 * 设置##tableName_val##VO
+	 * @param ##tableName_val##VO
+	 * @generated
+	 */
+	public void set##tableName##VO(##tableName##VO ##tableName_val##VO) {
+		this.##tableName_val##VO = ##tableName_val##VO;
+	}
+
+	/**
+	 * ajax类型交易访问入口方法
+	 * @generated
+	 */
+	public String indexAaa() {
+		return "index";
+	}
+
+	/**
+	 * 根据条件查询数据
+	 * @generated
+	 */
+	public String find##tableName##ByWhere() {
+		ThreadContext.getContext().setAttribute(PTX_Constant.PAGEINFO,
+				this.composePageInfo());
+		try {
+			this.##tableName_val##VOList = this.##tableName_val##Service.find##tableName##ByWhere(this.##tableName_val##VO);
+			if (this.##tableName_val##VOList != null) {
+				this.totalRowCount = ((PageInfo) ThreadContext.getContext()
+						.getAttribute(PTX_Constant.PAGEINFO))
+						.getTotalRowCount();
+			}
+		} catch (BusinessException e) {
+			setMessage(e);
+			return "failureMessage";
+		}
+		return "listdata";
+	}
+
+	/**
+	 * 删除
+	 * @generated
+	 */
+	public String delete##tableName##() {
+		try {
+			##tableName##VO[] voList = new ##tableName##VO[new_Attribute3.length];
+			for (int i = 0; i < new_Attribute3.length; i++) {
+				##tableName##VO vo = new ##tableName##VO();
+
+				vo.setNew_Attribute3(new_Attribute3[i]);
+
+				voList[i] = vo;
+			}
+			this.##tableName_val##Service.delete##tableName##(voList);
+		} catch (BusinessException e) {
+			setMessage(e);
+			return "failureMessage";
+		}
+		setMessage("删除成功！");
+		return "successMessage";
+	}
+
+	/**
+	 * 插入一条数据
+	 * @generated
+	 */
+	public String insert##tableName##() {
+		try {
+			this.##tableName_val##Service.insert##tableName##(this.##tableName_val##VO);
+		} catch (BusinessException e) {
+			setMessage(e);
+			return "failureMessage";
+		}
+		setMessage("成功添加一条信息！");
+		return "successMessage";
+	}
+
+	/**
+	 * 更新一条数据
+	 * @generated
+	 */
+	public String update##tableName##() {
+		try {
+			this.##tableName_val##Service.update##tableName##(this.##tableName_val##VO);
+		} catch (BusinessException e) {
+			setMessage(e);
+			return "failureMessage";
+		}
+		setMessage("修改成功！");
+		return "successMessage";
+	}
+}

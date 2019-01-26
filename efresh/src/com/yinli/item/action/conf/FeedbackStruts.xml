@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+	<package name="feedback" namespace="/" extends="authority">
+		<action name="feedback_*" class="feedbackAction" method="{1}">
+			<result type="json"></result>
+		</action>
+	</package>
+	
+	<package name="feedbacks" namespace="/" extends="authority">
+		<action name="feedbacks_*" class="feedbackAction" method="{1}">
+			<result name = "success">/jsp/esys/hmachread.jsp</result>
+		</action>
+	</package>
+</struts>

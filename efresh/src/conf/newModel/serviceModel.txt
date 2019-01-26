@@ -1,0 +1,61 @@
+/*
+ * 
+ * 
+ *
+ * 创建日期: ##DATE##
+ */
+package com.yinli.item.service;
+
+import java.util.List;
+import plantix.core.business.exception.BusinessException;
+import plantix.core.service.Service;
+import com.yinli.item.vo.##tableName##VO;
+
+/**
+ * aaaService接口
+ * 
+ */
+public interface I##tableName##Service extends Service {
+
+	/**
+	 * 根据主键查询
+	 * @exception BusinessException
+	 */
+	public ##tableName##VO find##tableName##ByKey(##tableName##VO ##tableName_val##VO) throws BusinessException;
+
+	/**
+	 * 根据主键删除一条数据
+	 * @exception BusinessException
+	 */
+	public int delete##tableName##ByKey(##tableName##VO ##tableName_val##VO) throws BusinessException;
+
+	/**
+	 * 删除
+	 * @exception BusinessException 
+	 */
+	public void delete##tableName##(##tableName##VO[] ids) throws BusinessException;
+
+	/**
+	 * 查询所有数据
+	 * @exception BusinessException 
+	 */
+	public List<##tableName##VO> findAll##tableName##() throws BusinessException;
+
+	/**
+	 * 根据条件查询数据
+	 * @exception BusinessException 
+	 */
+	public List<##tableName##VO> find##tableName##ByWhere(##tableName##VO ##tableName_val##VO) throws BusinessException;
+
+	/**
+	 * 插入一条数据
+	 * @exception BusinessException
+	 */
+	public void insert##tableName##(##tableName##VO ##tableName_val##VO) throws BusinessException;
+
+	/**
+	 * 更新一条数据
+	 * @exception BusinessException
+	 */
+	public int update##tableName##(##tableName##VO ##tableName_val##VO) throws BusinessException;
+}

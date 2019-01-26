@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<!-- 
+    20131120
+-->
+
+<hibernate-mapping>
+	<class name="com.yinli.item.vo.T_excel_info" table="t_excel_info" >
+		<id name="idNumber" type="java.lang.String">
+			<column name="idNumber" />
+		</id>
+		<property name="product_no" type="java.lang.String">
+			<column name="product_no" />
+		</property>
+		<property name="Para_name" type="java.lang.String">
+			<column name="Para_name" />
+		</property>
+		<property name="Y_site" type="java.lang.String">
+			<column name="Y_site" />
+		</property>
+		<property name="X_site" type="java.lang.String">
+			<column name="X_site" />
+		</property>
+		<property name="X_tab" type="java.lang.String">
+			<column name="X_tab" />
+		</property>
+		<property name="type" type="java.lang.String">
+			<column name="type" />
+		</property>
+		<property name="Exc_value" type="java.lang.String">
+			<column name="Exc_value" />
+		</property>
+		<property name="sheetName" type="java.lang.String">
+			<column name="sheetName" />
+		</property>
+		<property name="paraSite" type="java.lang.String">
+			<column name="paraSite" />
+		</property>
+		<property name="back1" type="java.lang.String">
+			<column name="back1" />
+		</property>
+	</class>
+</hibernate-mapping>

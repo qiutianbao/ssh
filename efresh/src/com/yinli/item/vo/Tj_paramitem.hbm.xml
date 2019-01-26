@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<!-- 
+    20160125
+-->
+
+<hibernate-mapping>
+	<class name="com.yinli.item.vo.Tj_paramitem" table="tj_paramitem">
+		<id name="idNumber" type="java.lang.Integer">
+			<column name="idNumber" />
+			<generator class="native" />
+		</id>
+		<property name="PARA" type="java.lang.String">
+			<column name="PARA" />
+		</property>
+		<property name="PARAMETERID" type="java.lang.String">
+			<column name="PARAMETERID" />
+		</property>
+		<property name="PARAMETERNAME" type="java.lang.String">
+			<column name="PARAMETERNAME" />
+		</property>
+		<property name="ABNAME" type="java.lang.String">
+			<column name="ABNAME" />
+		</property>
+		<property name="PARAMLEVEL" type="java.lang.String">
+			<column name="PARAMLEVEL" />
+		</property>
+		<property name="PARAMETERMEMO" type="java.lang.String">
+			<column name="PARAMETERMEMO" />
+		</property>
+		<property name="SORTNUM" type="java.lang.Integer">
+			<column name="SORTNUM" />
+		</property>
+		<property name="SP_PARAMVALUE" type="java.lang.String">
+			<column name="SP_PARAMVALUE" />
+		</property>
+		<property name="SP_PARAMID" type="java.lang.String">
+			<column name="SP_PARAMID" />
+		</property>
+		<property name="IF_NODE" type="java.lang.String">
+			<column name="IF_NODE" />
+		</property>
+	</class>
+</hibernate-mapping>

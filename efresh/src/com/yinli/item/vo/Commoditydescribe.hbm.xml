@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<!-- 
+    20160125
+-->
+
+<hibernate-mapping>
+	<class name="com.yinli.item.vo.Commoditydescribe" table="commoditydescribe" >
+		<id name="idNumber" type="java.lang.Integer">
+			<column name="idNumber" />
+			<generator class="native" />
+		</id>
+		<property name="idCommodity" type="java.lang.Integer">
+			<column name="idCommodity" />
+		</property>
+		<property name="imagename1" type="java.lang.String">
+			<column name="imagename1" />
+		</property>
+		<property name="describe1" type="java.lang.String">
+			<column name="describe1" />
+		</property>
+		<property name="imagename2" type="java.lang.String">
+			<column name="imagename2" />
+		</property>
+		<property name="describe2" type="java.lang.String">
+			<column name="describe2" />
+		</property>
+		<property name="imagename3" type="java.lang.String">
+			<column name="imagename3" />
+		</property>
+		<property name="describe3" type="java.lang.String">
+			<column name="describe3" />
+		</property>
+		<property name="imagename4" type="java.lang.String">
+			<column name="imagename4" />
+		</property>
+		<property name="describe4" type="java.lang.String">
+			<column name="describe4" />
+		</property>
+		<property name="imagename5" type="java.lang.String">
+			<column name="imagename5" />
+		</property>
+		<property name="describe5" type="java.lang.String">
+			<column name="describe5" />
+		</property>
+		<property name="imagename6" type="java.lang.String">
+			<column name="imagename6" />
+		</property>
+		<property name="describe6" type="java.lang.String">
+			<column name="describe6" />
+		</property>
+		<property name="ts" type="java.lang.String">
+			<column name="ts" />
+		</property>
+		<property name="dr" type="java.lang.Integer">
+			<column name="dr" />
+		</property>
+		<property name="back1" type="java.lang.String">
+			<column name="back1" />
+		</property>
+		<property name="back2" type="java.lang.String">
+			<column name="back2" />
+		</property>
+		<property name="back3" type="java.lang.String">
+			<column name="back3" />
+		</property>
+		<property name="back4" type="java.lang.String">
+			<column name="back4" />
+		</property>
+		<property name="back5" type="java.lang.Double">
+			<column name="back5" />
+		</property>
+	</class>
+</hibernate-mapping>

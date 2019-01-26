@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<!-- 
+    20160125
+-->
+
+<hibernate-mapping>
+	<class name="com.yinli.item.vo.Userscore" table="userscore">
+		<id name="idNumber" type="java.lang.Integer">
+			<column name="idNumber" />
+			<generator class="native" />
+		</id>
+		<property name="idScore" type="java.lang.Integer">
+			<column name="idScore" />
+		</property>
+		<property name="orderNo" type="java.lang.String">
+			<column name="orderNo" />
+		</property>
+		<property name="commodity" type="java.lang.String">
+			<column name="commodity" />
+		</property>
+		<property name="originaddress" type="java.lang.String">
+			<column name="originaddress" />
+		</property>
+		<property name="score" type="java.lang.Integer">
+			<column name="score" />
+		</property>
+		<property name="ts" type="java.lang.String">
+			<column name="ts" />
+		</property>
+		<property name="dr" type="java.lang.Integer">
+			<column name="dr" />
+		</property>
+		<property name="back1" type="java.lang.String">
+			<column name="back1" />
+		</property>
+	</class>
+</hibernate-mapping>

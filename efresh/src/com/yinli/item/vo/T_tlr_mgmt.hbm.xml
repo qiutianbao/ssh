@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<!-- 
+    20160128
+-->
+
+<hibernate-mapping>
+	<class name="com.yinli.item.vo.T_tlr_mgmt" table="t_tlr_mgmt">
+		<id name="idNumber" type="java.lang.Integer">
+			<column name="idNumber" />
+			<generator class="native" />
+		</id>
+		<property name="phone" type="java.lang.String">
+			<column name="phone" />
+		</property>
+		<property name="tlr_name" type="java.lang.String">
+			<column name="tlr_name" />
+		</property>
+		<property name="inst_no" type="java.lang.String">
+			<column name="inst_no" />
+		</property>
+		<property name="tlr_type" type="java.lang.String">
+			<column name="tlr_type" />
+		</property>
+		<property name="tlr_pwd" type="java.lang.String">
+			<column name="tlr_pwd" />
+		</property>
+		<property name="tlr_stat" type="java.lang.String">
+			<column name="tlr_stat" />
+		</property>
+
+		<property name="islock" type="java.lang.String">
+			<column name="islock" />
+		</property>
+		<property name="deliveryaddress" type="java.lang.String">
+			<column name="deliveryaddress" />
+		</property>
+		<property name="stallsname" type="java.lang.String">
+			<column name="stallsname" />
+		</property>
+		<property name="creationtime" type="java.util.Date">
+			<column name="creationtime" />
+		</property>
+		<property name="userlogo" type="java.lang.String">
+			<column name="userlogo" />
+		</property>
+		<property name="examine" type="java.lang.String">
+			<column name="examine" />
+		</property>
+		<property name="lst_pwd_date" type="java.lang.String">
+			<column name="lst_pwd_date" />
+		</property>
+		<property name="lst_modify_tlr" type="java.lang.String">
+			<column name="lst_modify_tlr" />
+		</property>
+		<property name="lst_modify_date" type="java.lang.String">
+			<column name="lst_modify_date" />
+		</property>
+		<property name="deliveryaddress2" type="java.lang.String">
+			<column name="deliveryaddress2" />
+		</property>
+		<property name="address_status" type="java.lang.String">
+			<column name="address_status" />
+		</property>
+		<property name="addresss_upts" type="java.lang.String">
+			<column name="addresss_upts" />
+		</property>
+		<property name="dr" type="java.lang.Integer">
+			<column name="dr" />
+		</property>
+		<property name="back1" type="java.lang.String">
+			<column name="back1" />
+		</property>
+		<property name="back2" type="java.lang.String">
+			<column name="back2" />
+		</property>
+		<property name="back3" type="java.lang.Double">
+			<column name="back3" />
+		</property>
+		
+		
+		<property name="province" type="java.lang.String">
+			<column name="province" />
+		</property>
+		<property name="city" type="java.lang.String">
+			<column name="city" />
+		</property>
+		<property name="area" type="java.lang.String">
+			<column name="area" />
+		</property>
+		<property name="provinceup" type="java.lang.String">
+			<column name="provinceup" />
+		</property>
+		<property name="cityup" type="java.lang.String">
+			<column name="cityup" />
+		</property>
+		<property name="areaup" type="java.lang.String">
+			<column name="areaup" />
+		</property>
+		<property name="phoneup" type="java.lang.String">
+			<column name="phoneup" />
+		</property>
+		
+		<property name="nameup" type="java.lang.String">
+			<column name="nameup" />
+		</property>
+		<property name="stallsnameup" type="java.lang.String">
+			<column name="stallsnameup" />
+		</property>
+		<property name="update_status" type="java.lang.String">
+			<column name="update_status" />
+		</property>
+	</class>
+</hibernate-mapping>

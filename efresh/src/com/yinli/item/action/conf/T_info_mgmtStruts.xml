@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+	<package name="t_info_mgmt" namespace="/" extends="authority">
+		<action name="t_info_mgmt_*" class="t_info_mgmtAction" method="{1}">
+			<result type="json"></result>
+			<result type="json" name="none">
+				<param name="contentType">text/html;charset=utf-8</param> 
+			</result>
+		</action>
+	</package>
+</struts>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<link rel="stylesheet" href="../../css/esys/reset.css" />
+<link rel="stylesheet" href="../../css/esys/add_pro.css" />
+<link rel="stylesheet" type="text/css" href="../../css/esys/dropkick.css"/>
+<script type="text/javascript" src="../../script/esys/jquery1.10.2.min.js"></script>
+<script type="text/javascript" src="../../script/esys/jquery.dropkick-min.js"></script>
+<script type="text/javascript" src="../../script/esys/add_pro.js"></script>
+</head>
+<body>
+<div class="modify">
+  <div class="modify_main">
+    <form name="Uploadms">
+      <p class="addTitle">商品基本信息</p>
+      <div class="moist">
+        <table width="760" border="0" cellpadding="0" cellspacing="0">
+          <tbody>
+            <tr>
+              <td width="124" align="right">一级分类：</td>
+              <td width=""><select name="country-nofake" class="default">
+                  <option value="AU">招商</option>
+                  <option value="CA">招商</option>
+                  <option value="DE">招商</option>
+                  <option value="JP">招商</option>
+                  <option value="GB">招商</option>
+                  <option value="US">招商</option>
+                </select>
+                <span class="moisture">二级分类：</span>
+                <select name="country-nofake" class="default">
+                  <option value="AU">招商1</option>
+                  <option value="CA">招商</option>
+                  <option value="DE">招商</option>
+                  <option value="JP">招商</option>
+                  <option value="GB">招商</option>
+                  <option value="US">招商</option>
+                </select>
+                <span class="moisture">品牌：</span>
+                <select name="country-nofake" class="default">
+                  <option value="AU">招商银行</option>
+                  <option value="CA">中国工商银行</option>
+                  <option value="DE">中国建设银行</option>
+                  <option value="JP">华夏银行</option>
+                  <option value="GB">中国农商银行</option>
+                  <option value="US">中国银行</option>
+                </select></td>
+            </tr>
+            <tr>
+              <td align="right">商品名称：</td>
+              <td><div class="mosquito">
+                  <input type="text" class="mosquito_txt"/>
+                </div></td>
+            </tr>
+            <tr>
+              <td align="right"><span class="getchu">商品编号：</span></td>
+              <td><div class="mosquito getborder">
+                  <input type="text" class="mosquito_txt" disabled="disabled"/>
+                </div></td>
+            </tr>
+            <tr>
+              <td align="right">产地名称：</td>
+              <td><div class="mosquito getborder">
+                  <input type="text" class="mosquito_txt" disabled="disabled"/>
+                </div></td>
+            </tr>
+          
+          </tbody>
+        </table>
+      </div>
+      <div class="motor">
+        <div class="motor_top">
+          <p class="addTitle" style="float:left">商品级别信息</p>
+          <span class="mount"><img src="../../images/esys/203.png"/></span> <a href="javascript:;" class="mountain" id="add_level">新增级别</a>
+          <div style="clear:both"></div>
+        </div>
+        <div class="chn-main">
+          <div class="muddy">
+            <p class="mug_pk">级别信息：</p>
+            <div class="mug">
+              <table width="480" border="0" cellpadding="0" cellspacing="0">
+                <tbody>
+                  <tr>
+                    <td width="113" align="center">级别</td>
+                    <td width="309"><div class="emperor">
+                        <input type="text" class="emperor_txt"/>
+                      </div></td>
+                  </tr>
+                
+               
+                  <tr>
+                    <td align="center">毛重</td>
+                    <td><div class="emperor">
+                        <input type="text" class="emperor_txt"/>
+                      </div></td>
+                  </tr>
+                  <tr>
+                    <td align="center">净重</td>
+                    <td><div class="emperor">
+                        <input type="text" class="emperor_txt"/>
+                      </div></td>
+                  </tr>
+                  <tr>
+                    <td align="center">包装规格</td>
+                    <td><div class="emperor">
+                        <input type="text" class="emperor_txt"/>
+                      </div></td>
+                  </tr>
+                  <tr>
+                    <td align="center">库存量</td>
+                    <td><div class="emperor">
+                        <input type="text" class="emperor_txt"/>
+                      </div></td>
+                  </tr>
+                  <tr>
+                    <td align="center">价格日历</td>
+                    <td>
+                    <div class="murder">
+                        <div class="ability-fox">
+                        <div class="murder_left">
+                          <input type="text" class="murder_txt ddfg" value="请选择日期" id="demo3"/>
+                        </div>
+                        <span class="muscle">至</span>
+                        <div class="murder_left">
+                          <input type="text" class="murder_txt ddfg" value="请选择日期" id="demo4"/>
+                        </div>
+                        <div class="murder_left">
+                          <input type="text" class="murder_txt" value="请输入售价"/>
+                        </div>
+                        </div>
+                        
+                        
+                      <a href="javascript:;" class="absorb-over"><img src="../../images/esys/204-1.png"/></a>  
+                        
+                        
+                      </div>
+                      
+                      
+                      </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <a href="javascript:;" class="museum">新增属性</a>
+            <div class="clear"></div>
+          </div>
+        </div>
+      </div>
+      <div class="edition">
+        <p class="addTitle" style="float:left">商品图片信息</p>
+        <div class="clear"></div>
+        <div class="edition_con">
+          <p class="p_show1">展示图片：</p>
+          <a class="p_show2" href="javascript:;" id="preview"><img src="../../images/esys/039.png" width="232" height="162"/>
+          <input type="file" name="file" class="ahp" accept="image/*"  onchange="checkImage(this)"/>
+          </a>
+          <p class="p_show3">(图片比例4:3，支持png，jpg，图片大小不
+            超过500k)</p>
+        </div>
+        <div class="clear"></div>
+        <div class="edition_con">
+          <p class="p_show1">轮播图片：</p>
+          <div id="ckImg2"></div>
+          <a class="p_show2 empire" href="javascript:;"><img src="../../images/esys/039.png" width="232" height="162"/>
+          <input type="file" class="ahp" accept="image/*" onchange="previewImage(this)" />
+          </a>
+          <p class="p_show3 numtxrt">(图片比例2:1，支持png，jpg，单张图片大
+            小不超过500k，最多5张)</p>
+        </div>
+        <div class="clear"></div>
+      </div>
+      <div class="elect_main">
+        <div class="motor_top">
+          <p class="addTitle" style="float:left">商品图文信息</p>
+          <span class="mount"><img src="../../images/esys/203.png"/></span> <a href="javascript:;" class="mountain add_con">新增一个</a>
+          <div style="clear:both"></div>
+        </div>
+        <div class="pro_main" style="float:left">
+          <div class="encounter-xv">
+            <div class="element_main">
+              <p class="p_show1 p_titlek">图文描述：</p>
+              <div class="envelope-kxm"> <a href="javascript:;" class="p_show2" id="getImg0"><img src="../../images/esys/040.png" width="233" height="162"/>
+                <input type="file" class="newgetImg"  accept="image/*"  onChange="checkImage2(this)"/>
+                </a>
+                <p class="p_show3">(图片比例2:1，支持png，jpg，单张图片大
+                  小不超过500k，最多5张)</p>
+                <div class="clear"></div>
+                <div class="emit-fbx">
+                  <div class="eliminate-k">
+                    <textarea cols="46" rows="8" class="elsewhere">请输入相对应文字描述</textarea>
+                  </div>
+                  <!--  <button class="emerge-btn">新增一个</button>-->
+                  <div class="clear"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="clear"></div>
+          <button class="setpro">发布</button>
+        </div>
+        <div class="clear"></div>
+      </div>
+      <div class="clear"></div>
+    </form>
+    
+    <!----> 
+  </div>
+  <div class="clear"></div>
+</div>
+<script type="text/javascript">
+$(function(){
+$('.default').dropkick();	
+})
+</script> 
+<script type="text/javascript" src="../../script/esys/laydate.js"></script> 
+<script type="text/javascript">
+!function(){
+	laydate.skin('molv');//切换皮肤，请查看skins下面皮肤库
+	laydate({elem: '#demo'});//绑定元素
+	laydate({elem: '#demo2'});
+	/*laydate({elem: '#demo3'});
+	laydate({elem: '#demo4'});*/
+}();
+
+//日期范围限制
+var start = {
+    elem: '#start',
+    format: 'YYYY-MM-DD',
+    min: laydate.now(), //设定最小日期为当前日期
+    max: '2099-06-16', //最大日期
+    istime: true,
+    istoday: false,
+    choose: function(datas){
+         end.min = datas; //开始日选好后，重置结束日的最小日期
+         end.start = datas //将结束日的初始值设定为开始日
+    }
+};
+
+var end = {
+    elem: '#end',
+    format: 'YYYY-MM-DD',
+    min: laydate.now(),
+    max: '2099-06-16',
+    istime: true,
+    istoday: false,
+    choose: function(datas){
+        start.max = datas; //结束日选好后，充值开始日的最大日期
+    }
+};
+laydate(start);
+laydate(end);
+
+//自定义日期格式
+laydate({
+    elem: '#test1',
+    format: 'YYYY年MM月DD日',
+    festival: true, //显示节日
+    choose: function(datas){ //选择日期完毕的回调
+        alert('得到：'+datas);
+    }
+});
+
+//日期范围限定在昨天到明天
+laydate({
+    elem: '#hello3',
+    min: laydate.now(-1), //-1代表昨天，-2代表前天，以此类推
+    max: laydate.now(+1) //+1代表明天，+2代表后天，以此类推
+});
+</script>
+</body>
+</html>

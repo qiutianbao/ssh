@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<!-- 是否开启动态方法，动态方法调用格式actionName!methodName.action,不推荐该方式 -->
+	<constant name="struts.enable.DynamicMethodInvocation" value="false" />
+	<!-- 开发模式下使用可以打印出详细的错误信息 -->
+	<constant name="struts.devMode" value="false" />
+	<!-- 指定编码集 -->
+	<constant name="struuts.i18n.encoding" value="UTF-8"></constant>
+	<!-- 指定使用国际化资源struts2 -->
+	<constant name="struts.custom.i18n.resources" value="donglusoft"></constant>
+	<!-- 指定浏览器是否缓存静态内容 -->
+	<constant name="struts.serve.static.browserCache" value="false"></constant>
+	<!-- 指定struts配置文件修改后是否自动重新加载文件 -->
+	<constant name="struts.configuration.xml.reload" value="true"></constant>
+	<!-- 与spring集成，指定由spring负责action的创建 -->
+	<constant name="struts.objectFactory" value="spring"></constant>
+	<!-- 上传文件的大小限制 -->
+	<constant name="struts.multipart.maxSize" value="504857600"></constant>
+	<!-- 启动静态方法的访问 -->
+	<constant name="struts.ognl.allowStaticMethodAccess" value="true"></constant>
+
+	<package name="default" namespace="/" extends="struts-default">
+		<default-action-ref name="index" />
+		<global-results>
+			<result name="login">/login.jsp</result>
+			<result name="error">/error.jsp</result>
+			<result name="leaveList">/leaveList.jsp</result>
+		</global-results>
+		<action name="index">
+			<result type="dispatcher">
+				/WEB-INF/pages/index.jsp
+            </result>
+		</action>
+		
+
+	</package>
+	
+	
+	 <!--不受权限控制的Action请求配置-->        
+        <package name="non-authority" namespace="/"  extends="json-default" >  
+        		<action name="t_inst_mgmt_*" class="t_inst_mgmtAction" method="{1}">
+			<result type="json"></result>
+		</action>
+		<action name="t_brno_showAllDept*" class="t_inst_mgmtAction" method="showAllDept">
+			<result name="treeJson">/rightmanagement/treeJson.jsp</result>
+		</action>                  
+                <action name="login" class="t_tlr_mgmtAction" method="login">              
+                       <result type="json"/>      
+                </action><!-- 
+                <action name="ipad_*" class="com.yinli.item.action.IpadRequestAction" method="{1}">
+                	 <result name="versions_update">/common/ipad_versions_update.jsp</result>
+                	 <result name="ipad_down_path">/fileLoad/ipad/ipad.html</result>
+                	 <result name="OA_down_path">/fileLoad/ipad/OAipad.html</result>
+                	 <result type="json"/> 
+				</action>   
+				<action name="getfunlist" class="com.yinli.item.action.IpadRequestAction" method="getfunlist">
+                	 <result type="json"/> 
+				</action>
+				<action name="getverid" class="com.yinli.item.action.IpadRequestAction" method="getverid">
+                	 <result type="json"/> 
+				</action>
+				<action name="post*" class="com.yinli.item.action.IpadRequestAction" method="postMoth">
+                	 <result type="json"/> 
+				</action>
+				 --><action name="ipadYS_*" class="com.yinli.item.action.T_excel_infoAction" method="{1}">
+                	<result>${product_comp_url}</result>
+				</action>
+				<action name="uploadFiles" class="com.yinli.util.common.FileAction" method="uploadFiles">
+					<result name="success" type="json">
+						<param name="includeProperties">success</param>
+					</result>
+					<result name="input" type="json">
+						<param name="includeProperties">success</param>
+					</result>
+				</action>
+				<action name="download" class="com.yinli.item.action.DownFileLoadAction">
+    				<!-- 下载文件名 -->
+    				<param name="fileName"></param>
+    				<!-- 设置输入流 -->
+    				<result name="fileWodn" type="stream">
+	    				<param name="inputName">inputStream</param>
+	    				<!-- 设置下载文件名 -->
+	    				<param name="contentDisposition">attachment;filename=${fileName}</param>
+    				</result>
+    				<result name="nofile">/error.jsp</result>
+   				 </action>
+				<action name="t_useRateExportExcel" class="t_useRateAction" method="ExportExcel">
+					<result type="chain" name="download">download</result> 
+				</action>
+          </package>
+	<!--受权限控制的Action请求配置-->        
+        <package name="authority" namespace="/"  extends="json-default,jasperreports-default">        
+                  <interceptors>       
+                        <!--定义一个名为authority的拦截器-->        
+                          <interceptor  class="com.donglusoft.rightmanagement.util.AuthorityInterceptor" name="authority"/>
+                        <!--定义异常处理的拦截器-->
+                              
+                         <interceptor name="exceptionManager" class="com.donglusoft.zzz.util.ExceptionInterceptor"/>      
+                        
+                        <!--定义一个包含权限检查的拦截器栈-->        
+                          <interceptor-stack name="mydefault">        
+                                <!--配置内建默认拦截器-->        
+                                  <interceptor-ref name="defaultStack"/>       
+                                <!--配置自定义的拦截器-->        
+                                  <interceptor-ref name="authority"/> 
+                                <!--配置自定义的异常处理拦截器-->
+                                  <interceptor-ref name="exceptionManager"/>       
+                          </interceptor-stack>        
+                  </interceptors>       
+                <default-interceptor-ref name="mydefault" />        
+                  <!--定义全局Result-->        
+                <global-results> 
+                		<result name="error">/error.jsp</result>        
+                        <result name="login">/login.jsp</result>     
+                </global-results>
+       </package>
+	<!-- 各模块struts配置文件 -->
+	<include file="com/yinli/item/action/conf/T_inst_mgmtStruts.xml"></include>
+	<include file="com/yinli/item/action/conf/User_defined_strutsStruts.xml"></include>
+	<include file="conf/struts/struts-rightmanagement.xml"></include>
+	<include file="com/yinli/item/action/conf/T_tlr_mgmtStruts.xml"></include>
+	<include file="com/yinli/item/action/conf/T_available_noStruts.xml"></include>
+	<include file="com/yinli/item/action/conf/Get_tablesStruts.xml"></include>
+	<include file="com/yinli/item/action/conf/struts-random.xml"></include>
+	<include file="com/yinli/item/action/conf/FeedbackStruts.xml"></include>
+	<include file="com/yinli/item/action/conf/StorageStruts.xml"></include>
+	<include file="com/yinli/item/action/conf/BindbankcardStruts.xml"></include>
+	<include file="com/yinli/item/action/conf/CarouselStruts.xml"></include>
+	<include file="com/yinli/item/action/conf/CommodityStruts.xml"></include>
+	<include file="com/yinli/item/action/conf/OutlibrarybillsStruts.xml"></include>
+	<include file="com/yinli/item/action/conf/UserscoreStruts.xml"></include>
+	<include file="com/yinli/item/action/conf/UseraccountStruts.xml"></include>
+	<include file="com/yinli/item/action/conf/TradingrecordsStruts.xml"></include>
+	
+	<include file="com/yinli/item/action/conf/SysmsgimagesStruts.xml"></include>
+	<include file="com/yinli/item/action/conf/SysmsgcontentStruts.xml"></include>
+	<include file="com/yinli/item/action/conf/StoragebillsStruts.xml"></include>
+	<include file="com/yinli/item/action/conf/SysmessageStruts.xml"></include>
+	<include file="com/yinli/item/action/conf/SubstationStruts.xml"></include>
+	<include file="com/yinli/item/action/conf/Sub_integralruleStruts.xml"></include>
+	<include file="com/yinli/item/action/conf/StorebrandStruts.xml"></include>
+	<include file="com/yinli/item/action/conf/Right_roleStruts.xml"></include>
+	
+	<include file="com/yinli/item/action/conf/Store_styleStruts.xml"></include>
+	<include file="com/yinli/item/action/conf/Store_productStruts.xml"></include>
+	<include file="com/yinli/item/action/conf/Store_imagesStruts.xml"></include>
+	
+	
+	<include file="com/yinli/item/action/conf/SecondlevelorderStruts.xml"></include>
+	<include file="com/yinli/item/action/conf/SecondorderdetailsStruts.xml"></include>
+<!-- 	<include file="com/yinli/item/action/conf/Right_menuStruts.xml"></include> -->
+	<include file="com/yinli/item/action/conf/RechargerulesStruts.xml"></include>
+	<include file="com/yinli/item/action/conf/RebatewayStruts.xml"></include>
+	<include file="com/yinli/item/action/conf/PaywayStruts.xml"></include>
+	<include file="com/yinli/item/action/conf/OutlibraryStruts.xml"></include>
+	<include file="com/yinli/item/action/conf/OrderdetailedStruts.xml"></include>
+	<include file="com/yinli/item/action/conf/LogisticsStruts.xml"></include>
+	<include file="com/yinli/item/action/conf/IntegralruleStruts.xml"></include>
+	<include file="com/yinli/item/action/conf/IntegralexchangeStruts.xml"></include>
+	<include file="com/yinli/item/action/conf/IntegralStruts.xml"></include>
+	<include file="com/yinli/item/action/conf/FristlevelorderStruts.xml"></include>
+	<include file="com/yinli/item/action/conf/EvaluateStruts.xml"></include>
+	<include file="com/yinli/item/action/conf/CommoditypriceStruts.xml"></include>
+	<include file="com/yinli/item/action/conf/CommoditylevelStruts.xml"></include>
+
+	<include file="com/yinli/item/action/conf/CommodityimagesStruts.xml"></include>
+	<include file="com/yinli/item/action/conf/CommoditydescribeStruts.xml"></include>
+	<include file="com/yinli/item/action/conf/CommoditycompanyStruts.xml"></include>
+	
+	
+	<include file="com/yinli/item/action/conf/CategoryStruts.xml"></include>
+	<include file="com/yinli/item/action/conf/AdvisoryStruts.xml"></include>
+	<include file="com/yinli/item/action/conf/AccountrevenueStruts.xml"></include>
+	<include file="com/yinli/item/action/conf/Tj_paramitemStruts.xml"></include>
+	<include file="com/yinli/item/action/conf/Tj_parameterStruts.xml"></include>
+	<include file="com/yinli/item/action/conf/EstoreStruts.xml"></include>
+	<include file="com/yinli/item/action/conf/SendSmsStruts.xml"></include>
+	<!-- 区域查询 -->
+	<include file="com/yinli/item/action/conf/AreaStruts.xml"></include>
+	
+	<include file="com/yinli/item/action/conf/IntegraltotalStruts.xml"></include>
+	<!-- 文件上传 
+	<include file="com/yinli/item/action/conf/FileUploadStruts.xml"></include>
+	-->
+	<!-- <bean  type="org.apache.struts2.dispatcher.multipart.MultiPartRequest"
+				 name="myRequestParser" class="com.yinli.util.common.MyRequestParser" 
+				 scope="default" optional="true"
+				 />
+	<constant name="struts.multipart.handler" value="myRequestParser" /> -->
+	
+</struts>    

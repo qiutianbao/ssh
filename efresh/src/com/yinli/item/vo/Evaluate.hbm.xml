@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<!-- 
+    20160125
+-->
+
+<hibernate-mapping>
+	<class name="com.yinli.item.vo.Evaluate" table="evaluate" >
+		<id name="idNumber" type="java.lang.Integer">
+			<column name="idNumber" />
+			<generator class="native" />
+		</id>
+		<property name="idEvaluate" type="java.lang.Integer">
+			<column name="idEvaluate" />
+		</property>
+		<property name="orderNo" type="java.lang.String">
+			<column name="orderNo" />
+		</property>
+		<property name="evaluatecontent" type="java.lang.String">
+			<column name="evaluatecontent" />
+		</property>
+		<property name="evaluatetime" type="java.util.Date">
+			<column name="evaluatetime" />
+		</property>
+		<property name="idReply" type="java.lang.Integer">
+			<column name="idReply" />
+		</property>
+		<property name="replycontent" type="java.lang.String">
+			<column name="replycontent" />
+		</property>
+		<property name="replytime" type="java.util.Date">
+			<column name="replytime" />
+		</property>
+		<property name="ts" type="java.lang.String">
+			<column name="ts" />
+		</property>
+		<property name="dr" type="java.lang.Integer">
+			<column name="dr" />
+		</property>
+		<property name="back1" type="java.lang.String">
+			<column name="back1" />
+		</property>
+	</class>
+</hibernate-mapping>

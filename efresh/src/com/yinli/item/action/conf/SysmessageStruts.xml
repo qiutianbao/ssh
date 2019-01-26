@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+	<package name="sysmessage" namespace="/" extends="authority">
+		<action name="sysmessage_*" class="sysmessageAction" method="{1}">
+			<result type="json"></result>
+		</action>
+	</package>
+	
+	
+	<package name="sysmessages" namespace="/" extends="authority">
+		<action name="sysmessages_*" class="sysmessageAction" method="{1}">
+			<result name = "success">/jsp/esys/noticeview.jsp</result>
+			<result name = "sysmsgimages">/jsp/esys/issued2.jsp</result>
+			<result name="list" >/common/sysmessageView.jsp</result>
+		</action>
+	</package>
+
+</struts>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- 
+    20160125
+-->
+<hibernate-mapping>
+ <class name="com.yinli.item.vo.Store_product"  table="store_product">
+  <id name="idNumber" type="java.lang.Integer">
+   <column name="idNumber"/>
+   <generator class="native"/>
+  </id>
+  <property generated="never" lazy="false" name="idStoreStyle" type="java.lang.Integer">
+   <column name="idStoreStyle"/>
+  </property>
+  <property generated="never" lazy="false" name="productname" type="java.lang.String">
+   <column name="productname"/>
+  </property>
+  <property generated="never" lazy="false" name="imgname" type="java.lang.String">
+   <column name="imgname"/>
+  </property>
+  <property generated="never" lazy="false" name="ts" type="java.lang.String">
+   <column name="ts"/>
+  </property>
+  <property generated="never" lazy="false" name="dr" type="java.lang.Integer">
+   <column name="dr"/>
+  </property>
+  <property generated="never" lazy="false" name="back1" type="java.lang.String">
+   <column name="back1"/>
+  </property>
+  <property generated="never" lazy="false" name="back2" type="java.lang.String">
+   <column name="back2"/>
+  </property>
+ </class>
+</hibernate-mapping>

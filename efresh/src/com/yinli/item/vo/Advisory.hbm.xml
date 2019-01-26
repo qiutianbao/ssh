@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<!-- 
+    20160125
+-->
+
+<hibernate-mapping>
+	<class name="com.yinli.item.vo.Advisory" table="advisory" >
+		<id name="idNumber" type="java.lang.Integer">
+			<column name="idNumber" />
+			<generator class="native" />
+		</id>
+		<property name="idAdvisory" type="java.lang.Integer">
+			<column name="idAdvisory" />
+		</property>
+		<property name="advtime" type="java.util.Date">
+			<column name="advtime" />
+		</property>
+		<property name="advcontent" type="java.lang.String">
+			<column name="advcontent" />
+		</property>
+		<property name="idReply" type="java.lang.Integer">
+			<column name="idReply" />
+		</property>
+		<property name="replycontent" type="java.lang.String">
+			<column name="replycontent" />
+		</property>
+		<property name="replytime" type="java.util.Date">
+			<column name="replytime" />
+		</property>
+		<property name="ts" type="java.lang.String">
+			<column name="ts" />
+		</property>
+		<property name="dr" type="java.lang.Integer">
+			<column name="dr" />
+		</property>
+		<property name="back1" type="java.lang.String">
+			<column name="back1" />
+		</property>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="../css/iframe_style.css" />
+		<link rel="stylesheet" href="../css/login.css" />
+		<link rel="stylesheet" href="../css/bootstrap.min.css" />
+		<script type="text/javascript" src="../js/jquery1.10.2.min.js"></script>
+		<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+	</head>
+
+	<body bgcolor="transparent" style='background:transparent'>
+
+		<div class="iframe_main2">
+
+			<div class="iframe_wrap">
+
+				<strong class="cktitle">入库管理</strong>
+				<div class="h14"></div>
+
+				<div class="avenue">
+					<p class="cktitle float_l">入库时间：</p>
+					<div class="casual">
+						<input type="text" class="carpet" disabled="disabled" />
+						<span class="chamber"><img src="../images/013.png"/></span>
+					</div>
+
+					<p class="chest">至</p>
+
+					<div class="casual">
+						<input type="text" class="carpet" disabled="disabled" />
+						<span class="chamber"><img src="../images/013.png"/></span>
+					</div>
+
+					<p class="circuit">基地：</p>
+
+					<div class="clasp">
+						<div class="gtf_txt"></div>
+						<span class="brass"><img src="../images/014.png"/></span>
+						<div class="bronze">
+							<span>bronze1</span>
+							<span>bronze2</span>
+							<span>bronze3</span>
+						</div>
+
+					</div>
+
+					<button class=" btn btn-default" id="burden">搜索</button>
+
+					<button class="btn btn-lg btn-success" id="camp">新增入库单</button>
+					<div class="clear"></div>
+				</div>
+
+				<div class="clear"></div>
+
+				<table class="table table-bordered" id="cargo">
+					<thead>
+						<tr>
+							<th>序号</th>
+							<th>订单编号</th>
+							<th>基地</th>
+							<th>经办人</th>
+							<th>入库时间</th>
+							<th>操作</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>01</td>
+							<td>2016012016401356</td>
+							<td>广东省茂名鲜蔬基地</td>
+							<td>张三</td>
+							<td>2016-01-20 13:30</td>
+							<td>
+								<button class="btn btn-danger rkbtn" id="chief">查看</button>
+							</td>
+						</tr>
+						<tr>
+							<td>02</td>
+							<td>2016012115305565</td>
+							<td>南方农贸基地</td>
+							<td>李四</td>
+							<td>2016-01-21 15:30</td>
+							<td>
+								<button class="btn btn-info rkbtn" id="chief1">查看</button>
+							</td>
+						</tr>
+						<tr>
+							<td>03</td>
+							<td>2016012245662636</td>
+							<td>深圳市福田区蔬果基地</td>
+							<td>王五</td>
+							<td>2016-01-22 16:40</td>
+							<td>
+								<button class="btn btn-warning rkbtn" id="chief2">查看</button>
+							</td>
+						</tr>
+					</tbody>
+
+				</table>
+
+			</div>
+
+		</div>
+
+	</body>
+	<script type="text/javascript">
+		$(function(){
+		   	var _clasp=$('.clasp');
+		   	_clasp.on('click',function(){
+		   	$('.bronze').slideDown("fast");	
+		   	})
+		   	$('.bronze span').on('click',function(){
+		   	var _this=$(this);
+		   	//alert(_this.text());
+		   	$('.gtf_txt').text(_this.text());
+		   	$('.bronze').slideUp("fast");
+		   	return false;
+		   	})
+		   	
+		$('.rkbtn').on('click',function(){
+		$(window.parent.document).find('.iframe').attr('src','rkd.html');	
+			
+		})
+		   })
+	</script>
+
+</html>

@@ -1,0 +1,78 @@
+<%@ page contentType="text/html; charset=utf-8" language="java" 
+ import="java.util.*,com.jspsmart.upload.*" errorPage="" %>
+ <%@ page import="com.yinli.JOD4ExcelToHtml" %>
+ <%@ page import="java.io.File" %>
+  <%@ page import="java.net.ConnectException" %>
+ <html>
+ <head>
+ <title>文件上传处理页面</title>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+ </head>
+ 
+ <body>
+ <%
+String physicsPath = request.getRealPath("");
+
+try{
+     // 新建一个SmartUpload对象
+     SmartUpload su = new SmartUpload();
+     // 上传初始化
+     su.initialize(pageContext);
+     // 设定上传限制
+     // 1.限制每个上传文件的最大长度。
+      su.setMaxFileSize(50485760);
+     // 2.限制总上传数据的长度。
+      su.setTotalMaxFileSize(504857604);
+     // 3.设定允许上传的文件（通过扩展名限制）,仅允许doc,txt文件。
+   //   su.setAllowedFilesList("doc,txt,xls,wps");
+     // 4.设定禁止上传的文件（通过扩展名限制）,禁止上传带有exe,bat,
+     //jsp,htm,html扩展名的文件和没有扩展名的文件。
+      su.setDeniedFilesList("exe,bat,jsp,htm,html");
+     // 上传文件
+     su.upload();
+     // 将上传文件全部保存到指定目录
+     int count = su.save("weboffice/upload");
+     String url="weboffice/upload/"; 
+     String saveurl="";
+     String htmlurl="";
+     String finalUrl="";
+     com.jspsmart.upload.File myFile = su.getFiles().getFile(0);
+		String myFileName=myFile.getFileName(); //取得上载的文件的文件名(含后缀)
+ 		myFileName=myFileName.substring(0,myFileName.indexOf("."));
+ 		
+  		saveurl=application.getRealPath("/")+url; 
+  		htmlurl=application.getRealPath("/")+url;
+  		finalUrl=application.getRealPath("/")+url;
+  		
+   		saveurl+=myFileName+".doc"; //保存路径
+   		myFileName=myFileName.replaceAll("final", "");
+   		htmlurl+=myFileName+".html"; //生成静态页面保存路径
+	
+   	
+     // 逐一提取上传文件信息，同时可保存文件。
+     System.out.println("---------"+saveurl);
+		myFile.saveAs(saveurl,SmartUpload.SAVE_PHYSICAL);
+
+		
+		File inputFile=new File(saveurl);
+		File outputFile=new File(htmlurl);
+		   JOD4ExcelToHtml t = new JOD4ExcelToHtml();
+			try {
+				t.excel2Html(inputFile, outputFile);
+			} catch (ConnectException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+				
+			}
+		out.clear();
+		out.print("文档保存成功:");
+		out.flush();
+     }catch(Exception e){
+		e.printStackTrace();
+		out.clear();
+		out.print("failed");//返回控件HttpPost()方法值。
+		out.flush();
+}
+
+ %>
+

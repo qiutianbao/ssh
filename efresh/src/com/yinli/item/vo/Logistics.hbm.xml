@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<!-- 
+    20160125
+-->
+
+<hibernate-mapping>
+	<class name="com.yinli.item.vo.Logistics" table="logistics">
+		<id name="idNumber" type="java.lang.Integer">
+			<column name="idNumber" />
+			<generator class="native" />
+		</id>
+		<property name="corpname" type="java.lang.String">
+			<column name="corpname" />
+		</property>
+		<property name="corptel" type="java.lang.String">
+			<column name="corptel" />
+		</property>
+		<property name="ts" type="java.lang.String">
+			<column name="ts" />
+		</property>
+		<property name="dr" type="java.lang.Integer">
+			<column name="dr" />
+		</property>
+		<property name="back1" type="java.lang.String">
+			<column name="back1" />
+		</property>
+		<property name="back2" type="java.lang.String">
+			<column name="back2" />
+		</property>
+		<property name="back3" type="java.lang.String">
+			<column name="back3" />
+		</property>
+		<property name="back4" type="java.lang.String">
+			<column name="back4" />
+		</property>
+		<property name="back5" type="java.lang.Double">
+			<column name="back5" />
+		</property>
+	</class>
+</hibernate-mapping>

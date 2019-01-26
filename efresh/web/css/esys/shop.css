@@ -1,0 +1,83 @@
+.w1200k{width: 1200px;position: absolute;z-index: 999;left: 50%;top: 80px;margin-left: -600px;}
+.manner{color: #e8a12e;font-family: Microsoft YaHei;font-size: 26px;background:url(../../images/esys/032.png)left center no-repeat;display: block;width: 228px;height: 80px;line-height: 80px;
+text-align: right;float: left;margin-right: 20px;}
+.marine{width: 134px;height: 80px;float: left;background: url(../../images/esys/034.png) left center no-repeat;font-size: 26px;color: #e8a12e;line-height: 80px;text-align: right;margin-left: 10px;}
+.clear{clear: both;}
+.marriage{font-size: 20px;color: #666666;margin: 15px 0 0 40px;display: block;}
+.Marxisim{width: 100%;background:url(../../images/esys/038.png) repeat;-webkit-border-radius:8px;-moz-border-radius: 8px;border-radius: 8px;margin-top:15px;}
+.mass{display: block;float: left;margin: 18px 0 18px 60px; position:relative; z-index:10; -webkit-border-radius:50%;-moz-border-radius:50%; border-radius:50%; width:160px; height:160px; overflow:hidden; cursor: pointer;}
+.needtx{ color: #e8a12e;font-size: 16px;}
+.material{width: 100%;padding: 10px 0;}
+.material table{empty-cells: show;table-layout:fixed;border-collapse: collapse;}
+.material table tr{height: 45px;line-height: 45px;}
+.material table tr td{font-size: 16px;}
+.mature{width: 400px;height: 40px;line-height: 40px;-webkit-border-radius:8px;-moz-border-radius: 8px;border-radius: 8px;border: 1px #b3b3b3 solid;margin:5px 0 5px 10px; float:left}
+.maths_txt{ width:390px;height: 40px;padding-left:10px;line-height: 40px;background: none;border: none;outline: none; float:left; font-family:Microsoft YaHei; font-size: 16px; }
+.meadow{width:260px;float:left;height: 40px;line-height: 40px;-webkit-border-radius:8px;-moz-border-radius: 8px;border-radius: 8px;border: 1px #b3b3b3 solid;margin: 5px 0 5px 10px;}
+.meadow_txt{width: 100%;height: 40px;padding-left:10px;line-height: 40px;background: none;border: none;outline: none; float:left; font-family:Microsoft YaHei; font-size: 16px;}
+.add_txt{width: 36px;height: 36px;display: block;background: url(../../images/esys/036.png) no-repeat;border: none;outline: none;cursor: pointer;margin: 8px 0 0 10px;float: left;}
+.sexname{ width:148px; height:40px; line-height:40px;;-webkit-border-radius:8px;-moz-border-radius: 8px;border-radius: 8px;border: 1px #b3b3b3 solid;margin:5px 0 5px 10px; float:left}
+.sexname_txt{ width:138px; padding-left:10px; height:40px; line-height:40px;background: none;border: none;outline: none; float:left;font-family: Microsoft YaHei; font-size: 16px;}
+.idcard{ width:340px; height:40px; line-height:40px;-webkit-border-radius:8px;-moz-border-radius: 8px;border-radius: 8px;border: 1px #b3b3b3 solid;margin: 5px 0 5px 10px; float:left}
+.idcard_txt{ width:330px; padding-left:10px; height:40px; line-height:40px;background: none;border: none;outline: none; float:left; font-family: Microsoft YaHei; font-size: 16px;}
+.elephant,.embrace{ width:340px; height:42px;margin: 5px 0 5px 10px; position:relative}
+.elephant-one{ width:150px; float:left; height:40px; line-height:40px;-webkit-border-radius:8px;-moz-border-radius: 8px;border-radius: 8px;border: 1px #b3b3b3 solid; position:relative;}
+.date_txt{ width:140px; padding-left:10px; float:left; height:40px; line-height:40px; background:none; border:none; outline:none; font-family: Microsoft YaHei; font-size: 16px;}
+.elevator{ display:block; position:absolute; right:6px;top:5px; cursor:pointer}
+.embarrass{ float:left; margin:0 10px; color:#888888}
+.embrace-left{ width:180px; float:left; height:40px; line-height:40px;-webkit-border-radius:8px;-moz-border-radius: 8px;border-radius: 8px;border: 1px #b3b3b3 solid;}
+.embrace_txt{ width:170px; padding-left:10px; height:40px; line-height:40px; background:none; border:none; outline:none; float:left;font-family: Microsoft YaHei; font-size: 16px;}
+.hqyzm{ width:150px; height:42px; line-height:42px; text-align:center; border:none; background:#ffe48c;-webkit-border-radius:8px;-moz-border-radius: 8px;border-radius: 8px; float:right; display:block; font-family:Microsoft YaHei; font-size:16px; color:#e8a12e; outline:none; cursor:pointer}
+.needtx2{color: #e8a12e;font-size: 14px;}
+.entry{margin: 20px 0 20px 80px; float:left; cursor:pointer; position:relative}
+.equal{ width:140px; height:40px; line-height:40px;-webkit-border-radius:8px;-moz-border-radius: 8px;border-radius: 8px;border: 1px #b3b3b3 solid; float:left; margin: 5px 0 5px 10px;}
+.equal_txt{ width:130px; padding-left:10px; height:40px; line-height:40px; background:none; border:none; outline:none; float:left; font-family: Microsoft YaHei; font-size: 16px;}
+.equip{ width:170px; height:40px; line-height:40px;-webkit-border-radius:8px;-moz-border-radius: 8px;border-radius: 8px;border: 1px #b3b3b3 solid; float:left;margin: 5px 0 5px 10px;}
+.equip_txt{ width:160px; padding-left:10px; height:40px; line-height:40px; background:none; border:none; float:left; outline:none;font-family: Microsoft YaHei; font-size: 16px;}
+.tjbtn{ width:240px; margin:0 auto; display:block; height:45px; line-height:45px; background:#ffe48c;-webkit-border-radius:8px;-moz-border-radius: 8px;border-radius: 8px; border:none; cursor:pointer; outline:none; font-family:Microsoft YaHei; font-size:18px; color:#e8a12e; margin-top:30px}
+.escape,.essay{position:absolute; right:0; top:0; font-size:100px; opacity:0; filter:alpha(opacity=0); width:100%; height:100%; cursor:pointer}
+#ckImg{ float:left; margin:20px 0 20px 0}
+#ckImg img{ margin:0 10px}
+/*时间控件*/
+#jcDate { background:#fefefe; width:161px; padding:10px; height:203px; position:absolute; z-index:1000; border:2px solid #2b84b5; color:#333; display:none; font-size:0; overflow:hidden; }
+#jcDateTt { height:15px; line-height:15px; position:relative; margin-bottom:10px; }
+#jcDateTt a { color:#333; display:block; position:absolute; top:0; width:15px; height:15px; cursor:pointer; }
+#jcDateTt a#d_prev { background:url(../../images/esys/r_left.png) no-repeat center 3px; left:0; }
+#jcDateTt a#d_next { background:url(../../images/esys/r_right.png) no-repeat center 3px; right:0; }
+#jcDateTt a#d_prev:hover { background-position:center -11px; background-color:#2b84b5; }
+#jcDateTt a#d_next:hover { background-position:center -11px; background-color:#2b84b5; }
+#jcDateTt div { position:absolute; top:0; left:15px; right:15px; bottom:0; color:#333; font-size:12px; font-weight:bold; text-align:center; }
+#jcDateTt div samp,#jcDateTt div span { margin:0 5px; color:#333; font-size:12px; font-weight:bold; cursor:pointer; }
+#jcDateTt div samp:hover,#jcDateTt div span:hover,#jcDateTt div samp.visited,#jcDateTt div span.visited { color:#2b84b5; }
+#jcDateMax { width:1935px; height:124px; position:relative; left:-687px; top:0;}
+#jcDateMax ul { width:161px; font-size:0; float:left; height:124px; display:inline-black; }
+#jcDayWrap { overflow:hidden; }
+#jcYeas,#jcMonth { display:none; overflow:hidden; padding-left:2px; margin-bottom:10px; }
+#jcYeas dt,#jcYeas dd { font-weight:bold; width:53px; height:30px; float:left; text-align:center; line-height:30px; cursor:pointer; }
+#jcYeas dt:hover,#jcYeas dd:hover,#jcMonth dt:hover,#jcMonth dd:hover { background:#5aaad8; color:#fff; }
+#jcYeas dt.visited,#jcYeas dd.visited,#jcMonth dt.visited,#jcMonth dd.visited { background:#2b84b5; color:#fff; }
+#jcMonth dt { font-weight:bold; width:53px; height:25px; float:left; text-align:center; line-height:25px; cursor:pointer; margin:10px 0; }
+#jcDayWrap ul li,
+#jcDayCon dt { float:left; width:23px; line-height:20px; text-align:center; display:inline; }
+#jcDayWrap ul li { color:#bbb; cursor:pointer; }
+#jcDayCon dt { color:#2b84b5; font-size:13px; }
+#jcDayWrap ul li.jcDateColor { color:#555; }
+#jcDayWrap ul li.visited { background:#2b84b5; color:#fff; }
+#jcDayWrap ul li:hover { background:#5aaad8; color:#fff; }
+#jcDateMax { clear:both; }
+#jcDateBtn { clear:both; line-height:19px; height:19px; padding-top:10px; overflow:hidden; }
+#jcTimeWrap { float:right; width:54px; border:1px solid #999; border-left:1px solid #555; border-top:1px solid #555; height:17px; overflow:hidden; display:none; }
+#jcDateBtn label { width:6px; line-height:18px; height:17px; display:block; float:left; text-align:center; color:#333; }
+#jcDateBtn input { line-height:17px; height:17px; text-align:center; float:left; width:24px; border:0; }
+#jcDateBtn samp,#jcDateBtn span { float:left; margin-right:10px; cursor:pointer; }
+#jcDateBtn samp:hover,#jcDateBtn span:hover { color:#d52222; }
+#jcDateBtn a#d_sub { width:37px; float:right; display:block; line-height:18px; height:17px; text-align:right; cursor:pointer; }
+#jcDateBtn a#d_sub:hover { text-decoration:none; color:#d52222; font-weight:bold; }
+.logo_com{ width:140px; height:140px;-webkit-border-radius:50%;-moz-border-radius:50%;-o-border-radius:50%; border-radius:50%; overflow:hidden; display:block; float:left; margin-left:44px;margin-top: 15px;}
+.your_img{ float:left;margin-left: 27px;margin-top: 15px;margin-bottom: 15px;}
+.your_img p{ float:left; margin:0 8px;}
+.stopBtn{ width:145px; height:44px; margin:0 auto; text-align:center; background:url(../../images/esys/062.png) no-repeat; border:none; font-family:Microsoft YaHei; font-size:16px; line-height:44px; display:block; margin-top:60px; color:#FFFFFF}
+.gottop{ margin-top:-10px;}
+#city_china_val{float: left; margin-top: 50px;margin-left: 10px;}
+.province,.city,.area{ width: auto;height: 40px;-webkit-border-radius:5px;-moz-border-radius:5px; border-radius:5px; outline:none;background: url(../../images/esys/038.png) repeat;font-size: 16px; font-family: Microsoft YaHei }
+

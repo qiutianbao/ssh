@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+	<package name="commodity" namespace="/" extends="authority">
+		<action name="commodity_*" class="commodityAction" method="{1}">
+			<result type="json"> </result>
+			<result name="add_success">jsp/esys/add_pro.jsp</result>
+			<result name="detail_success">jsp/esys/editor_pro.jsp</result>
+			<result name="editor2_success" type="redirectAction">commodity_detail.action?commodity.idNumber=33</result>
+		</action>
+	</package>
+	<package name="commoditys" namespace="/" extends="authority">
+		<action name="commoditys_*" class="commodityAction" method="{1}">
+			<result name="success">common/commodityView.jsp</result>  
+		</action>
+	</package> 
+</struts>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>用户管理-权限修改</title>
+<link rel="stylesheet" href="../../css/esys/reset.css" />
+<link rel="stylesheet" href="../../css/esys/add_pro.css" />
+<link rel="stylesheet" type="text/css" href="../../css/esys/dropkick.css"/>
+<link rel="stylesheet" type="text/css"  href="../../css/esys/Iconfont/iconfont.css"/>
+<script type="text/javascript" src="../../script/esys/jquery1.10.2.min.js"></script>
+<script type="text/javascript" src="../../script/esys/powerset.js"></script>
+<script type="text/javascript" src="../../script/esys/jquery.dropkick-min.js"></script>
+</head>
+<body>
+<div class="modify">
+  <div class="modify_main">
+    <form name="SaveMenu">
+      <!---->
+      
+      <div class="ogre"> <span class="ogre-span" style="width:80px;text-align:right">用户名：</span>
+        <div class="ogre-div">
+          <input type="text" class="ogre-txt" value="13456874754"/>
+        </div>
+      </div>
+      <div class="clear"></div>
+    
+    <div class="ogre"> <span class="ogre-span">登录密码：</span>
+        <div class="ogre-div">
+          <input type="text" class="ogre-txt" value="123456789"/>
+        </div>
+      </div>
+    
+      <div class="clear"></div>
+      
+      <div class="ogre"> <span class="ogre-span">登录密码：</span>
+        <select name="country-nofake" class="default editork" style="outline:none">
+                    <option value="AU">超级管理员</option>
+                    <option value="CA">超级管理员1</option>
+                    <option value="DE">超级管理员2</option>
+                    <option value="JP">超级管理员3</option>
+                    <option value="GB">超级管理员4</option>
+                    <option value="US">超级管理员5</option>
+                  </select>
+      </div>
+        <div class="clear"></div>
+      <div class="platforms float_l"> <span class="ogre-span">权限选择：</span>
+        <div class="platforms-tab">
+          <div class="getbix"> <span class="bybox">1、系统管理模块：</span> <span class="default-all"></span> <span class="bybox">全选</span>
+            <input type="checkbox" class="ch-box" name="all-check" value="全选"/>
+          </div>
+          <div class="getbix-white">
+            <div class="beg"> <span class="default-ch"></span> <span class="bybox">分站管理</span>
+              <input type="checkbox" class="ch-box" name="check1" value="分站管理"/>
+            </div>
+            <div class="beg"> <span class="default-ch"></span> <span class="bybox">系统消息</span>
+              <input type="checkbox" class="ch-box" name="check2" value="系统消息"/>
+            </div>
+            <div class="beg"> <span class="default-ch"></span> <span class="bybox">人机交互</span>
+              <input type="checkbox" class="ch-box" name="check3" value="人机交互"/>
+            </div>
+            <div class="beg"> <span class="default-ch github"></span> <span class="bybox">权限管理</span>
+              <input type="checkbox" class="ch-box" name="check4" value="权限管理" checked="true"/>
+            </div>
+          </div>
+          <div class="getbix"> <span class="bybox">2、档案管理模块：</span> <span class="default-all"></span> <span class="bybox">全选</span>
+            <input type="checkbox" class="ch-box" name="all-check" value="全选"/>
+          </div>
+          <div class="getbix-white">
+            <div class="beg"> <span class="default-ch"></span> <span class="bybox">用户管理</span>
+              <input type="checkbox" class="ch-box" name="check1" value="用户管理"/>
+            </div>
+            <div class="beg"> <span class="default-ch"></span> <span class="bybox">角色管理</span>
+              <input type="checkbox" class="ch-box" name="check2" value="角色管理"/>
+            </div>
+            <div class="beg"> <span class="default-ch"></span> <span class="bybox">批发商店铺管理</span>
+              <input type="checkbox" class="ch-box" name="check3" value="批发商店铺管理"/>
+            </div>
+            <div class="beg"> <span class="default-ch"></span> <span class="bybox">自营店铺管理</span>
+              <input type="checkbox" class="ch-box" name="check4" value="自营店铺管理"/>
+            </div>
+            <div class="beg"> <span class="default-ch"></span> <span class="bybox">物流商管理</span>
+              <input type="checkbox" class="ch-box" name="check4" value="物流商管理"/>
+            </div>
+            <div class="beg"> <span class="default-ch"></span> <span class="bybox">积分管理</span>
+              <input type="checkbox" class="ch-box" name="check4" value="积分管理"/>
+            </div>
+          </div>
+          <div class="getbix"> <span class="bybox">3、商品管理模块：</span> <span class="default-all"></span> <span class="bybox">全选</span>
+            <input type="checkbox" class="ch-box" name="all-check" value="全选"/>
+          </div>
+          <div class="getbix-white">
+            <div class="beg"> <span class="default-ch"></span> <span class="bybox">商品管理</span>
+              <input type="checkbox" class="ch-box" name="check1" value="商品管理"/>
+            </div>
+            <div class="beg"> <span class="default-ch"></span> <span class="bybox">商品分类管理</span>
+              <input type="checkbox" class="ch-box" name="check2" value="商品分类管理"/>
+            </div>
+            <div class="beg"> <span class="default-ch"></span> <span class="bybox">商品品牌管理</span>
+              <input type="checkbox" class="ch-box" name="check3" value="商品品牌管理"/>
+            </div>
+            <div class="beg"> <span class="default-ch"></span> <span class="bybox">商品单位管理</span>
+              <input type="checkbox" class="ch-box" name="check4" value="商品单位管理"/>
+            </div>
+            <div class="beg"> <span class="default-ch"></span> <span class="bybox">新增商品管理</span>
+              <input type="checkbox" class="ch-box" name="check4" value="新增商品管理"/>
+            </div>
+            <div class="beg"> <span class="default-ch"></span> <span class="bybox">商品库存管理</span>
+              <input type="checkbox" class="ch-box" name="check4" value="商品库存管理"/>
+            </div>
+            <div class="beg"> <span class="default-ch"></span> <span class="bybox">首页轮播管理</span>
+              <input type="checkbox" class="ch-box" name="check4" value="首页轮播管理"/>
+            </div>
+          </div>
+          <div class="getbix"> <span class="bybox">4、订单管理模块：</span> <span class="default-all"></span> <span class="bybox">全选</span>
+            <input type="checkbox" class="ch-box" name="all-check" value="全选"/>
+          </div>
+          <div class="getbix-white">
+            <div class="beg"> <span class="default-ch"></span> <span class="bybox">订单管理</span>
+              <input type="checkbox" class="ch-box" name="check1" value="订单管理"/>
+            </div>
+            <div class="beg"> <span class="default-ch"></span> <span class="bybox">订单归集</span>
+              <input type="checkbox" class="ch-box" name="check2" value="订单归集"/>
+            </div>
+          </div>
+          <div class="getbix"> <span class="bybox">5、仓储物流模块：</span> <span class="default-all"></span> <span class="bybox">全选</span>
+            <input type="checkbox" class="ch-box" name="all-check" value="全选"/>
+          </div>
+          <div class="getbix-white">
+            <div class="beg"> <span class="default-ch"></span> <span class="bybox">入库管理</span>
+              <input type="checkbox" class="ch-box" name="check1" value="入库管理"/>
+            </div>
+            <div class="beg"> <span class="default-ch"></span> <span class="bybox">出库管理</span>
+              <input type="checkbox" class="ch-box" name="check2" value="出库管理"/>
+            </div>
+            <div class="beg"> <span class="default-ch"></span> <span class="bybox">物流管理</span>
+              <input type="checkbox" class="ch-box" name="check2" value="物流管理"/>
+            </div>
+          </div>
+          <div class="getbix"> <span class="bybox">6、支付管理模块：</span> <span class="default-all"></span> <span class="bybox">全选</span>
+            <input type="checkbox" class="ch-box" name="all-check" value="全选"/>
+          </div>
+          <div class="getbix-white">
+            <div class="beg"> <span class="default-ch"></span> <span class="bybox">规则管理</span>
+              <input type="checkbox" class="ch-box" name="check1" value="规则管理"/>
+            </div>
+            <div class="beg"> <span class="default-ch"></span> <span class="bybox">返利管理</span>
+              <input type="checkbox" class="ch-box" name="check2" value="返利管理"/>
+            </div>
+            <div class="beg"> <span class="default-ch"></span> <span class="bybox">支付管理</span>
+              <input type="checkbox" class="ch-box" name="check2" value="支付管理"/>
+            </div>
+          </div>
+          <div class="getbix"> <span class="bybox">7、数据报表模块：</span> <span class="default-all"></span> <span class="bybox">全选</span>
+            <input type="checkbox" class="ch-box" name="all-check" value="全选"/>
+          </div>
+          <div class="getbix-white">
+            <div class="beg"> <span class="default-ch"></span> <span class="bybox">供应商报表</span>
+              <input type="checkbox" class="ch-box" name="check1" value="供应商报表"/>
+            </div>
+            <div class="beg"> <span class="default-ch"></span> <span class="bybox">销售数据报表</span>
+              <input type="checkbox" class="ch-box" name="check2" value="销售数据报表"/>
+            </div>
+          </div>
+          <div class="clear"></div>
+          <button class="save-btn">保存</button>
+        </div>
+      </div>
+      <div class="clear"></div>
+      <!---->
+    </form>
+    <div class="clear"></div>
+  </div>
+  <div class="clear"></div>
+</div>
+<script type="text/javascript">
+$(function(){
+$('.default').dropkick();
+$('.default').find('.dk_label').width(120);	
+})
+</script> 
+</body>
+</html>

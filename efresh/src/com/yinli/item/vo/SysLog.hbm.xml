@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.yinli.item.vo.SysLog" table="syslog" >
+		
+		<id name="idNumber" type="java.lang.String" column="idNumber">
+			<generator class="uuid.hex" />
+		</id>
+		<property name="userid" type="java.lang.String">
+			<column name="userid" />
+		</property>
+		<property name="brno" type="java.lang.String">
+			<column name="brno" />
+		</property>
+		<property name="business" type="java.lang.String">
+			<column name="business" />
+		</property>
+		<property name="realDay" type="java.lang.String">
+			<column name="realDay" />
+		</property>
+		<property name="realTime" type="java.lang.String">
+			<column name="realTime" />
+		</property>
+		<property name="subjectMatter" type="java.lang.String">
+			<column name="subjectMatter" />
+		</property>
+		<property name="flag" type="java.lang.String">
+			<column name="flag" />
+		</property>
+	</class>
+</hibernate-mapping>

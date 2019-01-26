@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+	<package name="estore" namespace="/" extends="authority">
+		<action name="estore_*" class="estoreAction" method="{1}">
+			<result type="json"></result>
+			<result name="detail_success">/jsp/esys/wholesaler-detail.jsp</result>
+		</action>
+	</package>
+	<package name="addestore" namespace="/" extends="struts-default">
+		<action name="addestore_*" class="estoreAction" method="{1}">
+			<result name="add">login.jsp</result>
+			<result name="addstore">/common/estoreView.jsp</result>
+			<result name="addselftstore">/common/estore_selfView.jsp</result>
+		</action>
+	</package>
+</struts>

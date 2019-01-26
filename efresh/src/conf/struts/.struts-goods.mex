@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Struts2Diagram version="2.0">
+  <package name="goods" location="10,9" size="180,71">
+    <action name="find_Equipmentmanufacturer" location="15,23" size="150,41">
+      <result name="success" />
+    </action>
+    
+  </package>
+  
+  	<package name="equipment_expendable" extends="json-default" namespace="/goods">
+
+		<!-- 增删改查 -->
+		<action name="*_*" class="{2}Action" method="{1}{2}">
+			<result type="json" />
+		</action>
+
+	</package>
+</Struts2Diagram>
+

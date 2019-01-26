@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<!-- 
+    20160113
+-->
+
+<hibernate-mapping>
+	<class name="com.yinli.item.vo.User_defined_struts" table="user_defined_struts" schema="credit">
+		<id name="idNumber" type="java.lang.String">
+			<column name="idNumber" />
+		</id>
+		<property name="column" type="java.lang.String">
+			<column name="column" />
+		</property>
+		<property name="columnType" type="java.lang.String">
+			<column name="columnType" />
+		</property>
+		<property name="data_source" type="java.lang.String">
+			<column name="data_source" />
+		</property>
+		<property name="input_type" type="java.lang.String">
+			<column name="input_type" />
+		</property>
+		<property name="is_required" type="java.lang.String">
+			<column name="is_required" />
+		</property>
+		<property name="java_property" type="java.lang.String">
+			<column name="java_property" />
+		</property>
+		<property name="pannal" type="java.lang.String">
+			<column name="pannal" />
+		</property>
+		<property name="political" type="java.lang.String">
+			<column name="political" />
+		</property>
+		<property name="pro_type" type="java.lang.String">
+			<column name="pro_type" />
+		</property>
+		<property name="seqno" type="java.lang.String">
+			<column name="seqno" />
+		</property>
+		<property name="sord_order" type="java.lang.String">
+			<column name="sord_order" />
+		</property>
+		<property name="tableName" type="java.lang.String">
+			<column name="tableName" />
+		</property>
+		<property name="trigger_event" type="java.lang.String">
+			<column name="trigger_event" />
+		</property>
+		<property name="trigger_function" type="java.lang.String">
+			<column name="trigger_function" />
+		</property>
+	</class>
+</hibernate-mapping>

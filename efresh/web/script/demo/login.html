@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8" />
+  <title></title>
+  <meta name="author" content="yltfy2008@gmail.com" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+
+<style type="text/css">
+#public_login_box {
+    background: none repeat scroll 0 0 #FFFFFF;
+    font: 12px/1.5 宋体,Arial,Verdana;
+    height: 300px;
+    padding: 15px 18px 0;
+    width: 610px;
+}
+#public_login_box h1 {
+    background: url("loginbg.png") no-repeat scroll 0 0 transparent;
+    color: #333333;
+    font-family: Microsoft YaHei;
+    font-size: 24px;
+    font-weight: normal;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 40px;
+    position: relative;
+}
+#public_login_box h1 span {
+    background: url("loginbg.png") no-repeat scroll -1px -153px transparent;
+    cursor: pointer;
+    height: 34px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 34px;
+}
+#public_login_place {
+    border-right: 1px solid #DADADA;
+    float: left;
+    padding: 5px 0 5px 40px;
+    width: 285px;
+}
+#public_login_box .login_box_input {
+    position: relative;
+	text-align: left;
+}
+#public_login_place .login_find_pwd {
+    height: 18px;
+    line-height: 18px;
+}
+#public_login_box .login_box_input input {
+    background-color: #F7F7F7;
+    border: 1px solid #8F8F8F;
+    color: #5E5E5E;
+    height: 28px;
+    line-height: 28px;
+    padding: 0 0 0 8px;
+    width: 220px;
+}
+#public_login_place div {
+    margin-bottom: 20px;
+}
+#public_login_place button {
+    background: url("loginbg.png") no-repeat scroll -80px -41px transparent;
+    cursor: pointer;
+    display: block;
+    height: 30px;
+    margin-bottom: 20px;
+    width: 81px;
+}
+#public_login_box button {
+    border: 0 none;
+}
+#public_asign_place {
+    color: #5E5E5E;
+    float: left;
+    padding: 10px 0 0 46px;
+}
+#public_asign_place a {
+    background: url("loginbg.png") no-repeat scroll 0 -41px transparent;
+    display: block;
+    height: 30px;
+    margin: 30px 0 0 35px;
+    width: 80px;
+}
+#public_login_place .login_find_pwd span {
+    background: url("loginbg.png") no-repeat scroll 0 -74px transparent;
+    color: #7B7B7B;
+    cursor: pointer;
+    float: left;
+    margin-right: 25px;
+    padding-left: 25px;
+}
+</style>
+</head>
+<div id="public_login_box">
+<h1>用户登录<span onclick="parent.Util.Dialog.close('dialog-login', function(){alert('你关闭了登录窗口！')})"></span></h1>
+<div style="height:30px;"></div>
+<div id="public_login_place">
+	<div class="login_box_input">
+		<input value="用户名/验证邮箱" name="UserName" id="UserName">
+	</div>
+	<div class="login_box_input"><input type="password" value="" name="UserPwd" id="UserPwd"></div>
+	<div class="login_find_pwd">
+		<span>下次自动登录</span>
+		<a target="_blank" href="#">忘记密码？</a>
+	</div>
+	<button title="登录" type="buttom"></button>
+</div>
+<div id="public_asign_place">还没开通？赶快注册一个吧！<a title="注册" target="_blank" href="#"></a></div>
+</div>
+
+
+

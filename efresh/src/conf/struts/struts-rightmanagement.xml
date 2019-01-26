@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+<package name="com.donglusoft.rightmanagement.action" namespace="/" extends="authority">
+	<action name="rightUser_*" class="rightUserAction" method="{1}">
+		<result type="json"/>
+	</action>
+
+	<action name="rightRole_*" class="rightRoleAction" method="{1}">
+		<result type="json" />
+	</action>
+	<action name="rightRoleUser_*" class = "rightRoleUserAction" method="{1}">
+		<result type= "json" />
+	</action>
+	<action name="rightMenuRole_*" class ="rightMenuRoleAction" method="{1}">
+		<result type= "json" />
+	</action>
+	<action name="rightMenu_*" class = "rightMenuAction" method="{1}">
+		<result type= "json" />
+	</action>
+	<!-- 
+	<action name="diagnose_*" class="diagnoseAction" method="{1}">
+		<result type="json"/>
+	</action>
+	 -->
+</package>
+<package name="com.donglusoft.rightmanagement2.action" namespace="/" extends="struts-default">
+	<action name="rightDeptTree_*" class="rightDeptAction" method="{1}">
+			<result name="treeJson">/rightmanagement/treeJson.jsp</result>
+	</action>
+	<action name="rightMenu2_*" class="rightMenuAction" method="{1}">
+			<result name="treeJson">/rightmanagement/treeJson.jsp</result>
+			<result name="treeTest">/jsp/esys/test.jsp</result>
+			<result name="editor_role">jsp/esys/power-write.jsp</result>
+			<result name="update_role"  type="redirectAction">rightMenu2_showMenu.action?rightRole.id=${rightRole.id}</result>
+	</action>
+</package>
+</struts>

@@ -1,0 +1,214 @@
+package com.yinli.item.action;
+/*
+ *
+ * 创建日期: ##DATE##
+ */
+
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
+import javax.annotation.Resource;
+
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Controller;
+
+import com.yinli.item.vo.##tableName##;
+import com.yinli.item.service.##tableName##Service;
+import com.opensymphony.xwork2.ActionSupport;
+
+
+@Controller("##tableName_val##Action")
+@Scope("prototype")
+public class ##tableName##Action extends ActionSupport {
+
+	/**
+	 * 全表查询
+	 * @return
+	 */
+	public String findAll(){
+		try {
+			Map<String, Object> map = ##tableName_val##Service.findAll( start, limit, flag);
+			##tableName_val##List = (List<##tableName##>) map.get("infoList");
+			listCount = Integer.parseInt(map.get("listCount").toString());
+			success = true;
+		} catch (Exception e) {
+			e.printStackTrace();
+			success = false;
+		}
+		return SUCCESS;
+	}
+	
+
+	/**
+	 * 根据主键查询
+	 * @return
+	 */
+	public String findById() {
+		try {
+			tempList = new ArrayList<##tableName##>();
+			tempList.add(##tableName_val##Service.findById(##tableName_val##.getIdNumber()));
+			success = true;
+		} catch (Exception e) {
+			e.printStackTrace();
+			success = false;
+		}
+		return SUCCESS;
+	}
+	
+	/**
+	 * 添加
+	 * @return
+	 */
+	public String addNewInfo( ){
+		try {
+			##tableName_val##Service.addNewInfo(##tableName_val##);
+			success = true;
+		} catch (Exception e) {
+			e.printStackTrace();
+			success = false;
+		}
+		return SUCCESS;
+	}
+
+	/**
+	 * 更新
+	 * @return
+	 */
+	public String update() {
+		try {
+			##tableName_val##Service.update(##tableName_val##);
+			success = true;
+		} catch (Exception e) {
+			e.printStackTrace();
+			success = false;
+		}
+		return SUCCESS;
+	}
+	
+	/**
+	 * 删除
+	 * @return
+	 */
+	public String delete(){
+		try {
+			##tableName_val##Service.delete(delData);
+			success = true;
+		} catch (Exception e) {
+			e.printStackTrace();
+			success = false;
+		}
+		return SUCCESS;
+	}
+	
+	/**
+	 * 多条件查询
+	 * @return
+	 */
+	public String findInfoByConditions() {
+		try {
+			Map<String, Object> map = ##tableName_val##Service.findInfoByConditions(##tableName_val##, start, limit, starttime, endtime);
+			##tableName_val##List = (List<##tableName##>) map.get("##tableName_val##List");
+			listCount = Integer.parseInt(map.get("listCount").toString());
+			success = true;
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return SUCCESS;
+	}
+	
+	public ##tableName##Service get##tableName##Service() {
+		return ##tableName_val##Service;
+	}
+	public void set##tableName##Service(##tableName##Service ##tableName_val##Service) {
+		this.##tableName_val##Service = ##tableName_val##Service;
+	}
+	public ##tableName## get##tableName##() {
+		return ##tableName_val##;
+	}
+	public void set##tableName##(##tableName## ##tableName_val##) {
+		this.##tableName_val## = ##tableName_val##;
+	}
+	public List<##tableName##> get##tableName##List() {
+		return ##tableName_val##List;
+	}
+	public void set##tableName##List(List<##tableName##> ##tableName_val##List) {
+		this.##tableName_val##List = ##tableName_val##List;
+	}
+	public int getStart() {
+		return start;
+	}
+	public void setStart(int start) {
+		this.start = start;
+	}
+	public int getLimit() {
+		return limit;
+	}
+	public void setLimit(int limit) {
+		this.limit = limit;
+	}
+	public int getListCount() {
+		return listCount;
+	}
+	public void setListCount(int listCount) {
+		this.listCount = listCount;
+	}
+	public String getDelData() {
+		return delData;
+	}
+	public void setDelData(String delData) {
+		this.delData = delData;
+	}
+	public boolean isSuccess() {
+		return success;
+	}
+	public void setSuccess(boolean success) {
+		this.success = success;
+	}
+	public List<##tableName##> getTempList() {
+		return tempList;
+	}
+	public void setTempList(List<##tableName##> tempList) {
+		this.tempList = tempList;
+	}
+	
+	public String getStarttime() {
+		return starttime;
+	}
+
+	public void setStarttime(String starttime) {
+		this.starttime = starttime;
+	}
+
+	public String getEndtime() {
+		return endtime;
+	}
+
+	public void setEndtime(String endtime) {
+		this.endtime = endtime;
+	}
+
+	public String getFlag() {
+		return flag;
+	}
+
+	public void setFlag(String flag) {
+		this.flag = flag;
+	}
+
+	@Resource
+	private ##tableName##Service ##tableName_val##Service;
+	
+	private ##tableName## ##tableName_val##;
+	private List<##tableName##> ##tableName_val##List;
+	private int start;
+	private int limit;
+	private int listCount;
+	private String delData;
+	private boolean success;
+	private List<##tableName##> tempList;
+	private String starttime;
+	private String endtime;
+	private String flag;
+}

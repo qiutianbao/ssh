@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<!--<file>${filePath}/${logName}.html</file>-->
+	<!--<fileNamePattern>${filePath}/${logName}.%i</fileNamePattern>-->
+	<!-- 基础日志文件定义，各模块的日志在此基础上修改 -->
+	<appender name="businessFileAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${user.dir}/efresh/businesslog.htm</file>
+		<append>true</append>
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			<level>error</level>
+		</filter>
+		<rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
+			<fileNamePattern>${user.dir}/efresh/businesslog.%i</fileNamePattern>
+			<maxIndex>500</maxIndex>
+		</rollingPolicy>
+		<triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+			<maxFileSize>20MB</maxFileSize>
+		</triggeringPolicy>
+		<layout class="ch.qos.logback.classic.html.HTMLLayout">
+			<pattern>%date%p%C{3}%L%m%thread%logger{50}</pattern>
+			<Title>业务日志</Title>
+		</layout>
+	</appender>
+	
+	<!-- 权限管理模块 -->
+	<appender name="rightmanagementFileAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${user.dir}/efresh/rightmanagementbusinesslog.htm</file>
+		<append>true</append>
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			<level>error</level>
+		</filter>
+		<rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
+			<fileNamePattern>${user.dir}/efresh/rightmanagementbusinesslog.%i</fileNamePattern>
+			<maxIndex>500</maxIndex>
+		</rollingPolicy>
+		<triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+			<maxFileSize>20MB</maxFileSize>
+		</triggeringPolicy>
+		<layout class="ch.qos.logback.classic.html.HTMLLayout">
+			<pattern>%date%p%C{3}%L%m%thread%logger{50}</pattern>
+			<Title>业务日志</Title>
+		</layout>
+	</appender>
+	<!-- 权限    记录用户登录和退出信息 -->
+	<appender name="rightmanagementUserFileAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${user.dir}/efresh/rightmanagementUserlog.htm</file>
+		<append>true</append>
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			<level>error</level>
+		</filter>
+		<rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
+			<fileNamePattern>${user.dir}/efresh/rightmanagementUserlog.%i</fileNamePattern>
+			<maxIndex>500</maxIndex>
+		</rollingPolicy>
+		<triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+			<maxFileSize>20MB</maxFileSize>
+		</triggeringPolicy>
+		<layout class="ch.qos.logback.classic.html.HTMLLayout">
+			<pattern>%date%p%C{3}%L%m%thread%logger{50}</pattern>
+			<Title>业务日志</Title>
+		</layout>
+	</appender>
+	<appender name="RootFileAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${user.dir}/efresh/logFile.log</file>
+		<append>true</append>
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			<level>error</level>
+		</filter>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<FileNamePattern>${user.dir}/efresh/logFile.%d{yyyy-MM-dd}.log</FileNamePattern>
+			<MaxHistory>50</MaxHistory>
+		</rollingPolicy>
+		<triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+			<MaxFileSize>20MB</MaxFileSize>
+		</triggeringPolicy>
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<pattern>%date,,,,,%p,,,,,%C{3},,,,,%L,,,,,%thread,,,,,%logger{50},,,,,%m</pattern>
+		</layout>
+	</appender>
+	<logger additivity="false" name="business">
+		<level value="error" />
+		<appender-ref ref="businessFileAppender" />
+	</logger>
+
+	<logger additivity="false" name="rightmanagementbusiness">
+		<level value="error" />
+		<appender-ref ref="rightmanagementFileAppender" />
+	</logger>
+	<!-- 用户登录退出日志 -->
+	<logger additivity="false" name="rightmanagementUser">
+		<level value="error" />
+		<appender-ref ref="rightmanagementUserFileAppender" />
+	</logger>
+	<root>
+		<level value="error" />
+		<appender-ref ref="RootFileAppender" />
+	</root>
+</configuration>

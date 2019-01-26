@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<!-- 
+    20160125
+-->
+
+<hibernate-mapping>
+	<class name="com.yinli.item.vo.Tradingrecords" table="tradingrecords">
+		<id name="idNumber" type="java.lang.Integer">
+			<column name="idNumber" />
+			<generator class="native" />
+		</id>
+		<property name="idUser" type="java.lang.Integer">
+			<column name="idUser" />
+		</property>
+		<property name="idUseraccount" type="java.lang.Integer">
+			<column name="idUseraccount" />
+		</property>
+		<property name="idOrder" type="java.lang.Integer">
+			<column name="idOrder" />
+		</property>
+		<property name="idPayway" type="java.lang.Integer">
+			<column name="idPayway" />
+		</property>
+		<property name="tradingamount" type="java.lang.Double">
+			<column name="tradingamount" />
+		</property>
+		<property name="tradingtype" type="java.lang.Integer">
+			<column name="tradingtype" />
+		</property>
+		<property name="tradingtime" type="java.util.Date">
+			<column name="tradingtime" />
+		</property>
+		<property name="tradingNo" type="java.lang.String">
+			<column name="tradingNo" />
+		</property>
+		<property name="note" type="java.lang.String">
+			<column name="note" />
+		</property>
+		<property name="tradingstatus" type="java.lang.Integer">
+			<column name="tradingstatus" />
+		</property>
+		<property name="ts" type="java.lang.String">
+			<column name="ts" />
+		</property>
+		<property name="dr" type="java.lang.Integer">
+			<column name="dr" />
+		</property>
+		<property name="back1" type="java.lang.String">
+			<column name="back1" />
+		</property>
+		<property name="back2" type="java.lang.String">
+			<column name="back2" />
+		</property>
+		<property name="back3" type="java.lang.String">
+			<column name="back3" />
+		</property>
+		<property name="back4" type="java.lang.String">
+			<column name="back4" />
+		</property>
+		<property name="back5" type="java.lang.Double">
+			<column name="back5" />
+		</property>
+	</class>
+</hibernate-mapping>

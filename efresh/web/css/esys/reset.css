@@ -1,0 +1,71 @@
+@charset "utf-8";
+/* CSS Document */
+/*样式初始化*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td { margin:0; padding:0; }
+body{margin: 0; padding: 0;font-family:Microsoft YaHei;font-size: 12px;}
+input{ background:none}
+input:-webkit-autofill { -webkit-box-shadow: 0 0 0px 1000px white inset; border: 1px solid #CCC!important; } 
+ol,ul,li{list-style-type: none}
+img{border: none; }
+a{text-decoration: none;color: black}
+table{table-layout: fixed;border-collapse: collapse;empty-cells: show}
+.float_l{float: left}
+.float_r{float: right}
+.clear{clear: both}
+.f12{font-size: 12px}
+.f13{font-size: 13px}
+.f14{font-size: 14px}
+.f16{ font-size:16px;}
+.f18{ font-size:18px}
+.f20{ font-size:20px}
+.f24{font-size: 24px}
+.f30{ font-size:30px;}
+.mar_t5{margin-top: 5px}
+.mar_l4{margin-left: 4px}
+.mar_l7{ margin-left:7px}
+.line_h40{line-height: 40px}
+.line_h32{line-height: 32px}
+.tx_cent{text-align: center}
+.tx_right{ text-align:right}
+.show{display: block}
+.hide{ display:none}
+.h428{height: 428px;}
+.h83{height: 83px}
+.h85{ height:85px}
+.h5{height:5px}
+.h10{ height:10px}
+.h12{ height:12px;}
+.h15{ height:15px;}
+.h16{height: 16px}
+.h70{height: 70px}
+.h18{ height:18px}
+.h20{height: 20px}
+.h36{height: 36px}
+.h32{height:32px}
+.h22{height:22px}
+.h26{ height:26px}
+.h28{ height:28px}
+.h30{ height:30px}
+.h40{ height:40px;}
+.h64{ height:64px;}
+.h84{ height:84px;}
+.h106{ height:106px;}
+.line_h25{line-height: 25px}
+.font0{ color:#999999}
+.font1{ color:#e8a12e}
+.font2{ color: #888888}
+.font3{ color:#666666}
+.font4{ color:#cccccc}
+.font5{ color:#008733}
+.font6{ color:#FF0004}
+.letter_sp1{ letter-spacing:1px}
+.letter_sp2{ letter-spacing:2px}
+.letter_sp3{ letter-spacing:3px}
+.mar_gx{ margin-left:-2px;}
+.mar_gx2{ margin-left:2px}
+.marl6{ margin-left:6px}
+.marl8{ margin-left:8px}
+.marl20{ margin-left:20px}
+.mart8{ margin-top:8px;}
+.mart6{ margin-top:6px;}
+.mart10{ margin-top:10px;}

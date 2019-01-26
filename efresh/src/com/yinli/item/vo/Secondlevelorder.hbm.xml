@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<!-- 
+    20160128
+-->
+
+<hibernate-mapping>
+	<class name="com.yinli.item.vo.Secondlevelorder" table="secondlevelorder" >
+		<id name="idNumber" type="java.lang.Integer">
+			<column name="idNumber" />
+			<generator class="native" />
+		</id>
+		<property name="secondlevelorderNo" type="java.lang.String">
+			<column name="secondlevelorderNo" />
+		</property>
+		<property name="idStore" type="java.lang.Integer">
+			<column name="idStore" />
+		</property>
+		<property name="idUser" type="java.lang.Integer">
+			<column name="idUser" />
+		</property>
+	
+		<property name="creationordertime" type="java.util.Date">
+			<column name="creationordertime" />
+		</property>
+		<property name="orderstatus" type="java.lang.Integer">
+			<column name="orderstatus" />
+		</property>
+		<property name="arrivaltime" type="java.util.Date">
+			<column name="arrivaltime" />
+		</property>
+		<property name="ts" type="java.lang.String">
+			<column name="ts" />
+		</property>
+		<property name="dr" type="java.lang.Integer">
+			<column name="dr" />
+		</property>
+		<property name="back1" type="java.lang.String">
+			<column name="back1" />
+		</property>
+		<property name="back2" type="java.lang.String">
+			<column name="back2" />
+		</property>
+		<property name="back3" type="java.lang.String">
+			<column name="back3" />
+		</property>
+		<property name="back4" type="java.lang.String">
+			<column name="back4" />
+		</property>
+		<property name="back5" type="java.lang.Double">
+			<column name="back5" />
+		</property>
+		<property name="canceltime" type="java.util.Date">
+			<column name="canceltime" />
+		</property>
+		<property name="paytime" type="java.util.Date">
+			<column name="paytime" />
+		</property>
+		<property name="deliverytime" type="java.util.Date">
+			<column name="deliverytime" />
+		</property>
+		<property name="signtime" type="java.util.Date">
+			<column name="signtime" />
+		</property>
+		<property name="orderprice" type="java.lang.Double">
+			<column name="orderprice" />
+		</property>
+		<property name="signname" type="java.lang.String">
+			<column name="signname" />
+		</property>
+			<!-- 映射单项n-1的关联关系 -->
+		<!-- <many-to-one name="estore" class = "com.yinli.item.vo.Estore" >
+			<column name="idStore"></column>
+		</many-to-one>
+		<many-to-one name="t_tlr_mgmt" class = "com.yinli.item.vo.T_tlr_mgmt" >
+			<column name="idUser"></column>
+		</many-to-one> -->
+		
+		
+	</class>
+</hibernate-mapping>

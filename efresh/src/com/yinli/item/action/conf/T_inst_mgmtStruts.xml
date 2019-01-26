@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+	<package name="t_inst_mgmt" namespace="/" extends="non-authority">
+		<action name="t_inst_mgmt_*" class="t_inst_mgmtAction" method="{1}">
+			<result type="json"></result>
+		</action>
+		<action name="t_brno_showAllDept*" class="t_inst_mgmtAction" method="showAllDept">
+			<result name="treeJson">/rightmanagement/treeJson.jsp</result>
+		</action>
+	</package>
+</struts>

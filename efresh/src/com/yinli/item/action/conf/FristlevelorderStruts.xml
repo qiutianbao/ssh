@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+	<package name="fristlevelorder" namespace="/" extends="authority">
+		<action name="fristlevelorder_*" class="fristlevelorderAction" method="{1}">
+			<result type="json"></result>
+			<result name="success_detail">jsp/esys/subdd.jsp</result>
+			<result name="success_detail1">jsp/esys/subdd1.jsp</result>
+		</action>
+	</package>
+</struts>

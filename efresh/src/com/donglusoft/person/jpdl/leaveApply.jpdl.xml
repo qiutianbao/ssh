@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<process name="leaveApply" xmlns="http://jbpm.org/4.3/jpdl">
+   <start g="331,29,48,48" name="start1">
+      <transition to="请假申请"/>
+   </start>
+   <task assignee="personclerk" g="312,101,92,52" name="请假申请">
+      <transition g="-8,-43" name="副站长" to="正站长审核"/>
+      <transition g="364,300:-3,-103" name="科长" to="站长审核"/>
+      <transition g="-65,-12" name="科员" to="科长审核"/>
+   </task>
+   <task assignee="personadmin" g="150,270,92,52" name="正站长审核">
+      <transition g="-37,-50" name="批准" to="销假"/>
+      <transition g="200,410:-37,-72" name="不批准" to="end1"/>
+      <transition g="199,170:-26,34" name="驳回" to="请假申请"/>
+   </task>
+   <task assignee="personboss" g="461,276,92,52" name="站长审核">
+      <transition g="-32,-12" name="批准" to="销假"/>
+      <transition g="506,431:-37,-39" name="不批准" to="end1"/>
+      <transition g="29,14" name="驳回" to="请假申请"/>
+   </task>
+   <task assignee="personmanager" g="617,192,92,52" name="科长审核">
+      <transition g="-8,-30" name="批准" to="站长审核"/>
+      <transition g="664,408:-30,-73" name="不批准" to="end1"/>
+      <transition g="574,140:38,14" name="驳回" to="请假申请"/>
+   </task>
+   <task assignee="personApply" g="360,380,92,52" name="销假">
+      <transition g="-53,-22" name="确认销假" to="end1"/>
+   </task>
+   <end g="384,468,48,48" name="end1"/>
+</process>

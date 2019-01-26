@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts> 
+  <package name="##tableName_val##" extends="struts-default" namespace="/"> 
+    <action name="##tableName_val##Action_index##tableName##" method="index##tableName##" class="com.yinli.item.action.##tableName##Action"> 
+      <result type="dispatcher" name="index">/WEB-INF/pages/sample/##tableName_val##/list##tableName##.jsp</result> 
+    </action>  
+    <action name="##tableName_val##Action_insert##tableName##" method="insert##tableName##" class="com.yinli.item.action.##tableName##Action"> 
+    	<result name="successMessage">/WEB-INF/pages/successMessage.jsp</result>
+    </action>  
+    <action name="##tableName_val##Action_delete##tableName##" method="delete##tableName##" class="com.yinli.item.action.##tableName##Action"> 
+    	<result name="successMessage">/WEB-INF/pages/successMessage.jsp</result>
+     </action>
+    <action name="##tableName_val##Action_update##tableName##" method="update##tableName##" class="com.yinli.item.action.##tableName##Action"> 
+    	<result name="successMessage">/WEB-INF/pages/successMessage.jsp</result> 
+    </action>
+    <action name="##tableName_val##Action_find##tableName##ByWhere" method="find##tableName##ByWhere" class="com.yinli.item.action.##tableName##Action">
+      <result type="dispatcher" name="listdata">/WEB-INF/pages/sample/##tableName_val##/list##tableName##Data.jsp</result>
+    </action>
+  </package> 
+</struts>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<!-- 
+    20160125
+-->
+
+<hibernate-mapping>
+	<class name="com.yinli.item.vo.Tj_parameter" table="tj_parameter">
+		<id name="idNumber" type="java.lang.Integer">
+			<column name="idNumber" />
+			<generator class="native" />
+		</id>
+		<property name="PARAMETERID" type="java.lang.String">
+			<column name="PARAMETERID" />
+		</property>
+		<property name="PARAMETERMEMO" type="java.lang.String">
+			<column name="PARAMETERMEMO" />
+		</property>
+		<property name="PARAMETYPE" type="java.lang.String">
+			<column name="PARAMETYPE" />
+		</property>
+	</class>
+</hibernate-mapping>

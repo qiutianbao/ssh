@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>仓储物流-出库管理</title>
+		<link href="../../css/esys/reset.css" rel="stylesheet" type="text/css" />
+		<link href="../../css/esys/animate.css" rel="stylesheet" type="text/css" />
+		<link href="../../css/esys/main.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" type="text/css" href="../../css/esys/logistics/logistics.css" />
+		<script type="text/javascript" src="../../script/esys/jquery.min.js"></script>
+		<script type="text/javascript" src="../../script/esys/login/login.js"></script>
+		<script type="text/javascript" src="../../script/esys/logistics.js"></script>
+		<script type="text/javascript" src="../../script/esys/bottom.js"></script>
+
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="login_bg">
+				<img src="../../images/esys/login_bg.png" width="100%" height="100%" id="imgId" />
+				<iframe src="top.html" style="filter:Chroma(Color=white);" allowTransparency="true" frameborder="no" width="100%" height="50px" class="top_iframe"></iframe>
+				<div class="mainfast">
+					<!--左边-->
+
+					<iframe src="left.html" style="filter:Chroma(Color=white);" allowTransparency="true" frameborder="no" width="210px" class="iframe_left" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+					<!--左边-->
+
+					<!--右边-->
+					<div class="bison-right">
+						<iframe src="main.html" style="filter:Chroma(Color=white);" allowTransparency="true" height="100%" name="main_iframe" id="external-frame" class="iframe" frameborder="no" width="100%" scrolling="no"></iframe>
+					</div>
+					<!--右边-->
+					<div class="clear"></div>
+				</div>
+				<div class="clear"></div>
+				<!--底部-->
+				<iframe src="bottom.html" allowtransparency="true" frameborder="no" width="100%" height="60px" class="bottom_iframe"></iframe>
+				<!--底部-->
+			</div>
+		</div>
+		<!--遮罩层和弹出框-->
+		<div class="full_window"></div>
+		<div class="magnet">
+			<p class="mankind">您确定切换分站吗？点击确定要重新登录系统的哦</p>
+			<div class="mainland">
+				<button class="major-left">取消</button>
+				<button class="major-right">确定</button>
+				<div style="clear: both;"></div>
+			</div>
+		</div>
+		<!--遮罩层和弹出框-->
+	</body>
+	<script type="text/javascript">
+	$('.major-left').on('click',function(){
+	$('.full_window').hide();
+	$('.magnet').hide();	
+	})
+	</script>
+
+</html>

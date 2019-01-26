@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>订单管理</title>
+		<link rel="stylesheet" href="../../css/esys/iframe_style.css" />
+		<link rel="stylesheet" href="../../css/esys/login.css" />
+
+		<link rel="stylesheet" href="../../css/esys/bootstrap.min.css" />
+		<script type="text/javascript" src="../../script/esys/jquery1.10.2.min.js"></script>
+        <script type="text/javascript" src="../../script/esys/jquery.dropkick-min.js"></script>
+                <link rel="stylesheet" href="../../css/esys/dropkick.css" />
+	</head>
+
+	<body bgcolor="transparent" style='background:transparent'>
+
+		<div class="iframe_main2">
+
+			<div class="iframe_wrap">
+				<div class="avenue">
+					<p class="cktitle float_l">订单状态：</p>
+					<div class="clasp gemay">
+						<div class="gtf_txt"></div>
+						<span class="brass"><img src="../../images/esys/014.png"/></span>
+						<div class="bronze">
+							<span>bronze1</span>
+							<span>bronze2</span>
+							<span>bronze3</span>
+						</div>
+
+					</div>
+					<p class="circuit">下单时间：</p>
+					<div class="casual">
+						<input type="text" class="carpet gemay" id="xdstart" readonly />
+						<span class="chamber"><img src="../../images/esys/013.png"/></span>
+					</div>
+
+					<p class="chest">至</p>
+
+					<div class="casual gemay">
+						<input type="text" class="carpet gemay"  id="xdend"/>
+						<span class="chamber"><img src="../../images/esys/013.png"/></span>
+					</div>
+
+					<p class="circuit">到货时间：</p>
+					<div class="casual">
+						<input type="text" class="carpet gemay"  id="dhstart"/>
+						<span class="chamber"><img src="../../images/esys/013.png"/></span>
+					</div>
+					<p class="chest">至</p>
+					<div class="casual">
+						<input type="text" class="carpet gemay"  id="dhend"/>
+						<span class="chamber"><img src="../../images/esys/013.png"/></span>
+					</div>
+
+					<div class="clear"></div>
+				</div>
+				<div class="clear"></div>
+				<div style="height: 10px;"></div>
+				<div class="avenue">
+
+					<p class="cktitle float_l">基地：</p>
+					<div class="claspx gemay">
+						<div class="gtf_txt2"></div>
+						<span class="brass"><img src="../../images/esys/014.png"/></span>
+						<div class="bronzex">
+							<span>bronze1</span>
+							<span>bronze2</span>
+							<span>bronze3</span>
+						</div>
+
+					</div>
+
+					<p class="circuit">订单编号：</p>
+					<input type="text" class="broker gemay" />
+
+					<button class="btn enters">搜索</button>
+					<button class="btn reserve">订单归集</button>
+
+				</div>
+
+				<div class="clear"></div>
+
+				<div style="height: 30px;"></div>
+
+				<div class="forces">
+					<table class="table table-bordered" id="cargolist">
+						<thead>
+							<tr>
+								<th>序号</th>
+								<th>订单编号</th>
+								<th>送货地址</th>
+								<th>联系人</th>
+								<th>联系方式</th>
+								<th>基地</th>
+								<th>下单时间</th>
+								<th>状态</th>
+								<th>操作</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>01</td>
+								<td>20160214153015</td>
+								<td>广州天河</td>
+								<td>张三</td>
+								<td>13412635415</td>
+								<td>南方农贸基地</td>
+								<td>2015-12-30 13:30</td>
+								<td>待处理</td>
+								<td>
+									<button class="btn btn-sm thxred">查看</button>
+								</td>
+							</tr>
+							<tr>
+								<td>02</td>
+								<td>20160214153015</td>
+								<td>广州天河</td>
+								<td>张三</td>
+								<td>13412635415</td>
+								<td>南方农贸基地</td>
+								<td>2015-12-30 13:30</td>
+								<td>待处理</td>
+								<td>
+									<button class="btn btn-sm thxred">查看</button>
+								</td>
+							</tr>
+							<tr>
+								<td>03</td>
+								<td>20160214153015</td>
+								<td>广州天河</td>
+								<td>张三</td>
+								<td>13412635415</td>
+								<td>南方农贸基地</td>
+								<td>2015-12-30 13:30</td>
+								<td>待处理</td>
+								<td>
+									<button class="btn btn-sm thxred">查看</button>
+								</td>
+							</tr>
+							<tr>
+								<td>04</td>
+								<td>20160214153015</td>
+								<td>广州天河</td>
+								<td>张三</td>
+								<td>13412635415</td>
+								<td>南方农贸基地</td>
+								<td>2015-12-30 13:30</td>
+								<td>待处理</td>
+								<td>
+									<button class="btn btn-sm thxred">查看</button>
+								</td>
+							</tr>
+						</tbody>
+
+					</table>
+					<div class="measures">
+			<span class="fomnr">共40条记录，每页显示20条</span>						
+              <ul class="pager agenda">
+               <li><a href="#">上一页</a></li>
+               <li><a href="#">下一页</a></li>
+              </ul>
+             </div>
+				</div>
+
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	</body>
+	<script type="text/javascript">
+		$(function(){
+		   	var _clasp=$('.clasp');
+		   	_clasp.on('click',function(){
+		   	$('.bronze').slideDown("fast");	
+		   	})
+		   	$('.bronze span').on('click',function(){
+		   	var _this=$(this);
+		   	//alert(_this.text());
+		   	$('.gtf_txt').text(_this.text());
+		   	$('.bronze').slideUp("fast")
+		   	return false;
+		   	})
+		$('.claspx').on('click',function(){
+				$('.bronzex').slideDown("fast");		
+		})
+		  $('.bronzex span').on('click',function(){
+		   	var _this=$(this);
+		   	//alert(_this.text());
+		   	$('.gtf_txt2').text(_this.text());
+		   	$('.bronzex').slideUp("fast")
+		   	return false;
+		   	})
+		$('.reserve').on('click',function(){
+			
+		$(window.parent.document).find('.iframe').attr('src','ddgj.html');	
+			
+		})
+		$('.thxred').on('click',function(){	
+			$(window.parent.document).find('.iframe').attr('src','ddetail.html');	
+		})		  
+	 })
+	</script>
+<script type="text/javascript" src="../../script/esys/laydate.js"></script> 
+<script type="text/javascript">
+!function(){
+	laydate.skin('molv');//切换皮肤，请查看skins下面皮肤库
+	laydate({elem: '#xdstart'});//绑定元素
+	laydate({elem: '#xdend'});
+	laydate({elem: '#dhstart'});
+	laydate({elem: '#dhend'});
+	/*laydate({elem: '#demo3'});
+	laydate({elem: '#demo4'});*/
+}();
+
+//日期范围限制
+var start = {
+    elem: '#start',
+    format: 'YYYY-MM-DD',
+    min: laydate.now(), //设定最小日期为当前日期
+    max: '2099-06-16', //最大日期
+    istime: true,
+    istoday: false,
+    choose: function(datas){
+         end.min = datas; //开始日选好后，重置结束日的最小日期
+         end.start = datas //将结束日的初始值设定为开始日
+    }
+};
+
+var end = {
+    elem: '#end',
+    format: 'YYYY-MM-DD',
+    min: laydate.now(),
+    max: '2099-06-16',
+    istime: true,
+    istoday: false,
+    choose: function(datas){
+        start.max = datas; //结束日选好后，充值开始日的最大日期
+    }
+};
+laydate(start);
+laydate(end);
+
+//自定义日期格式
+laydate({
+    elem: '#test1',
+    format: 'YYYY年MM月DD日',
+    festival: true, //显示节日
+    choose: function(datas){ //选择日期完毕的回调
+        alert('得到：'+datas);
+    }
+});
+
+//日期范围限定在昨天到明天
+laydate({
+    elem: '#hello3',
+    min: laydate.now(-1), //-1代表昨天，-2代表前天，以此类推
+    max: laydate.now(+1) //+1代表明天，+2代表后天，以此类推
+});
+</script>
+
+
+
+</html>

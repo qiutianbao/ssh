@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<!-- 
+    20160127
+-->
+
+<hibernate-mapping>
+	<class name="com.yinli.item.vo.Estore" table="estore" >
+		<id name="idNumber" type="java.lang.Integer">
+			<column name="idNumber" />
+			<generator class="native" />
+		</id>
+		<property name="corplogo" type="java.lang.String">
+			<column name="corplogo" />
+		</property>
+		<property name="corpname" type="java.lang.String">
+			<column name="corpname" />
+		</property>
+		<property name="creationNo" type="java.lang.String">
+			<column name="creationNo" />
+		</property>
+		<property name="organization" type="java.lang.String">
+			<column name="organization" />
+		</property>
+		<property name="province"  type="java.lang.String">
+			<column name="province"></column>
+		</property>
+		<property name="city"  type="java.lang.String">
+			<column name="city"></column>
+		</property>
+		<property name="area"  type="java.lang.String">
+			<column name="area"></column>
+		</property>
+		<property name="address" type="java.lang.String">
+			<column name="address" />
+		</property>
+		<property name="legalname" type="java.lang.String">
+			<column name="legalname" />
+		</property>
+		<property name="id" type="java.lang.String">
+			<column name="id" />
+		</property>
+		<property name="validtime" type="java.lang.String">
+			<column name="validtime" />
+		</property>
+		<property name="legalphoneNo" type="java.lang.String">
+			<column name="legalphoneNo" />
+		</property>
+		<property name="legalqq" type="java.lang.String">
+			<column name="legalqq" />
+		</property>
+		<property name="legalwechat" type="java.lang.String">
+			<column name="legalwechat" />
+		</property>
+		<property name="businesslic" type="java.lang.String">
+			<column name="businesslic" />
+		</property>
+		<property name="idpositive" type="java.lang.String">
+			<column name="idpositive" />
+		</property>
+		<property name="idopposite" type="java.lang.String">
+			<column name="idopposite" />
+		</property>
+		<property name="accountname" type="java.lang.String">
+			<column name="accountname" />
+		</property>
+		<property name="accountbank" type="java.lang.String">
+			<column name="accountbank" />
+		</property>
+		<property name="bankaddress" type="java.lang.String">
+			<column name="bankaddress" />
+		</property>
+		<property name="bankaccount" type="java.lang.String">
+			<column name="bankaccount" />
+		</property>
+		<property name="validordertime" type="java.lang.String">
+			<column name="validordertime" />
+		</property>
+		<property name="handleordertime" type="java.lang.String">
+			<column name="handleordertime" />
+		</property>
+		<property name="deliverytime" type="java.lang.String">
+			<column name="deliverytime" />
+		</property>
+		<property name="password" type="java.lang.String">
+			<column name="password" />
+		</property>
+		<property name="contactname" type="java.lang.String">
+			<column name="contactname" />
+		</property>
+		<property name="contactphoneNo" type="java.lang.String">
+			<column name="contactphoneNo" />
+		</property>
+		<property name="contactqq" type="java.lang.String">
+			<column name="contactqq" />
+		</property>
+		<property name="contactwechat" type="java.lang.String">
+			<column name="contactwechat" />
+		</property>
+		<property name="creationtime" type="java.lang.String">
+			<column name="creationtime" />
+		</property>
+		<property name="ts" type="java.lang.String">
+			<column name="ts" />
+		</property>
+		<property name="dr" type="java.lang.Integer">
+			<column name="dr" />
+		</property>
+		<property name="status" type="java.lang.String">
+			<column name="status" />
+		</property>
+		<property name="back1" type="java.lang.String">
+			<column name="back1" />
+		</property>
+		<property name="back2" type="java.lang.String">
+			<column name="back2" />
+		</property>
+		<property name="back3" type="java.lang.String">
+			<column name="back3" />
+		</property>
+		<property name="back4" type="java.lang.String">
+			<column name="back4" />
+		</property>
+		<property name="back5" type="java.lang.Double">
+			<column name="back5" />
+		</property>
+		<property name="userid" type="java.lang.Integer">
+			<column name="userid" />
+		</property>
+		<property name="isStop" type="java.lang.String">
+			<column name="isStop" />
+		</property>
+		<property name="selftsales" type="java.lang.String">
+			<column name="selftsales" />
+		</property>
+	</class>
+</hibernate-mapping>

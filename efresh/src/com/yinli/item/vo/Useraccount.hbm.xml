@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<!-- 
+    20160125
+-->
+
+<hibernate-mapping>
+	<class name="com.yinli.item.vo.Useraccount" table="useraccount">
+		<id name="idNumber" type="java.lang.Integer">
+			<column name="idNumber" />
+			<generator class="native" />
+		</id>
+		<property name="account" type="java.lang.String">
+			<column name="account" />
+		</property>
+		<property name="idUser" type="java.lang.Integer">
+			<column name="idUser" />
+		</property>
+		<property name="balance" type="java.lang.Double">
+			<column name="balance" />
+		</property>
+		<property name="availablemoney" type="java.lang.Double">
+			<column name="availablemoney" />
+		</property>
+		<property name="notavailablemoney" type="java.lang.Double">
+			<column name="notavailablemoney" />
+		</property>
+		<property name="isSetpassword" type="java.lang.String">
+			<column name="isSetpassword" />
+		</property>
+		<property name="paypassword" type="java.lang.String">
+			<column name="paypassword" />
+		</property>
+		<property name="creationtime" type="java.util.Date">
+			<column name="creationtime" />
+		</property>
+		<property name="setpaypwdtime" type="java.util.Date">
+			<column name="setpaypwdtime" />
+		</property>
+		<property name="modifypaypwdtime" type="java.util.Date">
+			<column name="modifypaypwdtime" />
+		</property>
+		<property name="upmodifypaypwdtime" type="java.util.Date">
+			<column name="upmodifypaypwdtime" />
+		</property>
+		<property name="isfrozen" type="java.lang.String">
+			<column name="isfrozen" />
+		</property>
+		<property name="ts" type="java.lang.String">
+			<column name="ts" />
+		</property>
+		<property name="dr" type="java.lang.Integer">
+			<column name="dr" />
+		</property>
+		<property name="back1" type="java.lang.String">
+			<column name="back1" />
+		</property>
+		<property name="back2" type="java.lang.String">
+			<column name="back2" />
+		</property>
+		<property name="back3" type="java.lang.String">
+			<column name="back3" />
+		</property>
+		<property name="back4" type="java.lang.String">
+			<column name="back4" />
+		</property>
+		<property name="back5" type="java.lang.Double">
+			<column name="back5" />
+		</property>
+	</class>
+</hibernate-mapping>

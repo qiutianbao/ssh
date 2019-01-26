@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+	 <package name="downFileLoadAction"  extends="struts-default">
+		<action name="download" class="com.yinli.item.action.DownFileLoadAction">
+	    	<!-- 下载文件名 -->
+	    	<param name="fileName"></param>
+	    	<!-- 设置输入流 -->
+	    	<result name="fileWodn" type="stream">
+		    	<param name="inputName">inputStream</param>
+		    	<!-- 设置下载文件名 -->
+		    	<param name="contentDisposition">attachment;filename=${fileName}</param>
+	    	</result>
+	    </action>
+	     <action name="t_useRateExportExcel" class="t_useRateAction" method="ExportExcel">
+			<result type="chain" name="download">download</result>
+		</action>
+	</package>
+</struts>

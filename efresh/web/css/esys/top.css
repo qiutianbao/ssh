@@ -1,0 +1,8 @@
+@charset "utf-8";
+/* CSS Document */
+.bleed{width: 100%;height: 50px;}
+.bleed-top{/*background:url(../images/001.png) no-repeat;*/height: 50px;padding: 0 22px 0 30px;line-height: 50px;}
+.blanket{float:left;font-size: 16px; color: #e8a12e;}
+.blame{float: right;width:200px;font-size: 16px;}
+.blame p{color: #999999;float: left;}
+.blame a{color: #e8a12e;float: right;}

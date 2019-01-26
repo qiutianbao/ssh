@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>出库单</title>
+<link rel="stylesheet" href="../../css/esys/iframe_style.css" />
+<link rel="stylesheet" href="../../css/esys/login.css" />
+<link rel="stylesheet" href="../../css/esys/bootstrap.min.css" />
+<script type="text/javascript" src="../../script/esys/jquery1.10.2.min.js"></script>
+<script type="text/javascript" src="../../script/esys/bootstrap.min.js"></script>
+</head>
+<body bgcolor="transparent" style='background:transparent'>
+<div class="iframe_main2">
+  <div class="iframe_wrap">
+    <div class="claw"> <strong class="cktitle float_l">出库单号：</strong>
+      <div class="cliff">2016012015301256</div>
+    </div>
+    <div class="claw"> <strong class="cktitle float_l marl30">入库时间：</strong>
+      <div class="cliff">2016-01-20  13:30</div>
+    </div>
+    <div class="claw"> <strong class="cktitle float_l marl30">基地：</strong>
+      <div class="cliff">南方农贸基地</div>
+    </div>
+    <div class="claw"> <strong class="cktitle float_l marl30">经办人：</strong>
+      <div class="cliff" id="cliff">赵某某</div>
+    </div>
+    <button class="btn btn-lg btn-success" id="camp2">新增一行</button>
+    <div class="clear"></div>
+    <div style="height: 30px;"></div>
+    <form action="" name="id_commdicty">
+      <table class="table table-bordered" id="cargo">
+        <thead>
+          <tr>
+            <th>序号</th>
+            <th>商品名称</th>
+            <th>数量</th>
+            <th>规格</th>
+            <th>单价</th>
+            <th>重量</th>
+            <th>单位</th>
+            <th>金额</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>01</td>
+            <td>大白菜</td>
+            <td>5</td>
+            <td>箱</td>
+            <td>200</td>
+            <td>100</td>
+            <td>kg</td>
+            <td>1000</td>
+          </tr>
+          <tr>
+            <td>02</td>
+            <td>大白菜</td>
+            <td>5</td>
+            <td>箱</td>
+            <td>200</td>
+            <td>100</td>
+            <td>kg</td>
+            <td>1000</td>
+          </tr>
+          <tr>
+            <td>03</td>
+            <td>大白菜</td>
+            <td>5</td>
+            <td>箱</td>
+            <td>200</td>
+            <td>100</td>
+            <td>kg</td>
+            <td>1000</td>
+          </tr>
+          <tr>
+            <td colspan="9"><div class="economic" style="padding: 5px 20px;"> <span class="amount">金额总计：</span> <span class="all_amount">￥10880.00元</span>
+                <div style="clear: both;"></div>
+              </div></td>
+          </tr>
+        </tbody>
+      </table>
+      <input type="submit" class="btn btn-lg" id="camp3" value="保存">
+    </form>
+  </div>
+  <div class="clear"></div>
+</div>
+
+<!--弹出层-->
+
+<div class="full_window" id="full_window"></div>
+<div class="setbox">
+  <iframe src="text1.html"  width="600" height="300" frameborder="no" border="0" marginwidth=”0″ marginheight="0" scrolling="no" allowtransparency="yes"></iframe>
+</div>
+
+<!--弹出层-->
+
+</body>
+<script type="text/javascript">
+$(document).ready(function(e) {
+/*	var _length=$('#cargo').find('tr').length;
+	//alert(_length);
+	var _i=_length-2;
+    var _cast=$('#camp2');
+	_cast.on({
+	'click':function(){
+	var _str='<tr><td>0'+(_i+1)+'</td><td><input type="text" name="id_number"/><span class="show_txt"></span></td><td><select style="width:200px;outline:none"><option>1</option><option>2</option><option>3</option></select><span class="show_txt"></span></td><td><input type="text" name="id_gast"/><span class="show_txt"></span></td><td><input type="text" name="id_height"/><span class="show_txt"></span></td><td><input type="text" name="id_price"/><span class="show_txt"></span></td><td><input type="text" name="id_weight"/><span class="show_txt"></span></td><td><input type="text" name="id_kg"/><span class="show_txt"></span></td><td><input type="text" name="id_money"/><span class="show_txt"></span></td></tr>';
+	$(_str).insertBefore($('#cargo').find('tr:last'));
+	_i=_i+1;
+		}
+			
+	});
+$('#cargo').on('blur','input[name="id_number"],input[name="id_gast"],input[name="id_height"]',function(){
+     var _this=$(this);
+	
+	 if(_this.val()==""){
+		 alert('请输入正确值');
+		 }else{
+			  alert(_this.val()); 
+			 }
+	})*/
+	
+  $('#camp2').on({'click':function(){
+
+$('.full_window,.setbox').show();
+
+}})	
+
+
+
+
+});
+</script>
+</html>

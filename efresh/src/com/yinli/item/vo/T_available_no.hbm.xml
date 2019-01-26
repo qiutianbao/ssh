@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<!-- 
+    20131107
+-->
+
+<hibernate-mapping>
+	<class name="com.yinli.item.vo.T_available_no" table="t_available_no" >
+		<id name="idNumber" type="java.lang.String">
+			<column name="idNumber" />
+		</id>
+		<property name="inst_no" type="java.lang.String">
+			<column name="inst_no" />
+		</property>
+		<property name="name" type="java.lang.String">
+			<column name="name" />
+		</property>
+		<property name="crt_no" type="java.lang.Integer">
+			<column name="crt_no" />
+		</property>
+		<property name="bgn_no" type="java.lang.Integer">
+			<column name="bgn_no" />
+		</property>
+		<property name="inv" type="java.lang.Integer">
+			<column name="inv" />
+		</property>
+		<property name="max_no" type="java.lang.Integer">
+			<column name="max_no" />
+		</property>
+		<property name="warn_rate" type="java.lang.Double">
+			<column name="warn_rate" />
+		</property>
+	</class>
+</hibernate-mapping>

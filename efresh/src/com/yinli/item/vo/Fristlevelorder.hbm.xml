@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<!-- 
+    20160125
+-->
+
+<hibernate-mapping>
+	<class name="com.yinli.item.vo.Fristlevelorder" table="fristlevelorder">
+		<id name="idNumber" type="java.lang.Integer">
+			<column name="idNumber" />
+			<generator class="native" />
+		</id>
+		<property name="firstlevelorderNo" type="java.lang.String">
+			<column name="firstlevelorderNo" />
+		</property>
+		<property name="orderstatus" type="java.lang.Integer">
+			<column name="orderstatus" />
+		</property>
+		<property name="idStore" type="java.lang.Integer">
+			<column name="idStore" />
+		</property>
+		<property name="idUser" type="java.lang.Integer">
+			<column name="idUser" />
+		</property>
+		<property name="creationordertime" type="java.util.Date">
+			<column name="creationordertime" />
+		</property>
+		<property name="arrivaltime" type="java.util.Date">
+			<column name="arrivaltime" />
+		</property>
+		<property name="paytime" type="java.util.Date">
+			<column name="paytime" />
+		</property>
+		<property name="canceltime" type="java.util.Date">
+			<column name="canceltime" />
+		</property>
+		<property name="deliverytime" type="java.util.Date">
+			<column name="deliverytime" />
+		</property>
+		<property name="signtime" type="java.util.Date">
+			<column name="signtime" />
+		</property>
+		<property name="arrivaladdress" type="java.lang.String">
+			<column name="arrivaladdress" />
+		</property>
+		<property name="arrivalpeople" type="java.lang.String">
+			<column name="arrivalpeople" />
+		</property>
+		<property name="arrivalpeopletel" type="java.lang.String">
+			<column name="arrivalpeopletel" />
+		</property>
+		<property name="collectionstarttime" type="java.util.Date">
+			<column name="collectionstarttime" />
+		</property>
+		<property name="collectionendtime" type="java.util.Date">
+			<column name="collectionendtime" />
+		</property>
+		<property name="orderprice" type="java.lang.Double">
+			<column name="orderprice" />
+		</property>
+		<property name="ts" type="java.lang.String">
+			<column name="ts" />
+		</property>
+		<property name="dr" type="java.lang.Integer">
+			<column name="dr" />
+		</property>
+		<property name="back1" type="java.lang.String">
+			<column name="back1" />
+		</property>
+		<property name="back2" type="java.lang.String">
+			<column name="back2" />
+		</property>
+		<property name="back3" type="java.lang.String">
+			<column name="back3" />
+		</property>
+		<property name="back4" type="java.lang.String">
+			<column name="back4" />
+		</property>
+		<property name="back5" type="java.lang.Double">
+			<column name="back5" />
+		</property>
+	</class>
+</hibernate-mapping>

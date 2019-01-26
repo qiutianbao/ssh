@@ -1,0 +1,183 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>左边</title>
+		<link rel="stylesheet" href="../../css/esys/reset.css" />
+		<link rel="stylesheet" href="../../css/esys/left.css" />
+		<script type="text/javascript" src="../../script/esys/jquery.min.js"></script>
+		<script type="text/javascript" src="../../script/esys/logistics.js"></script>
+	</head>
+
+	<body bgcolor="transparent" style='background:transparent'>
+		<div class="bison-left">
+			<div class="biscuit">
+				<h1 class="logo"><img src="../../images/esys/003.png" width="50" height="50"/></h1>
+				<span>“e鲜”商城</span> </div>
+			<div class="birthplace">
+				<ul>
+
+					<li>
+						<a href="javascript:;" class="main_index"> <i class="ileft" subIndex="004"></i> <span>后台首页</span>
+							<div class="clear"></div>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;" class="stgl"> <i class="bent" subIndex="005"></i> <span>系统管理</span> <i class="irig"></i>
+							<div class="clear"></div>
+						</a>
+						<!--隐藏下拉-->
+						<div class="beggar"> <a href="javascript:;">分站管理</a> <a href="javascript:;" class="checkLink">系统消息</a> <a href="javascript:;">人机交互</a> </div>
+						<!--隐藏下拉-->
+					</li>
+					<li>
+						<a href="javascript:;"> <i class="bench" subIndex="006"></i> <span>档案管理</span> <i class="irig"></i>
+							<div class="clear"></div>
+						</a>
+						<!--隐藏下拉-->
+						<div class="beggar"> <a href="javascript:;">用户管理</a> <a href="javascript:;" class="checkLink">角色管理</a> <a href="javascript:;">批发商店铺</a>
+							<a href="javascript:;">自营店铺</a>
+							<a href="javascript:;">物流商管理</a>
+							<a href="javascript:;">积分管理</a>
+						</div>
+						<!--隐藏下拉-->
+
+					</li>
+					<li>
+						<a href="javascript:;"> <i class="belt" subIndex="007"></i> <span>商品管理</span> <i class="irig"></i>
+							<div class="clear"></div>
+						</a>
+						<!--隐藏下拉-->
+						<div class="beggar"> <a href="javascript:;">商品管理</a> <a href="javascript:;" class="checkLink">商品分类</a> <a href="javascript:;">商品品牌</a>
+							<a href="javascript:;">商品单位</a>
+							<a href="javascript:;">新增商品</a>
+							<a href="javascript:;">商品库存</a>
+						</div>
+						<!--隐藏下拉-->
+
+					</li>
+					<li>
+						<a href="javascript:;" class="ddgl"> <i class="below" subIndex="008"></i> <span>订单管理</span> <i class="irig"></i>
+							<div class="clear"></div>
+						</a>
+
+					</li>
+					<li>
+						<a href="javascript:;"> <i class="belief" subIndex="009"></i> <span>仓储物流</span> <i class="irig"></i>
+							<div class="clear"></div>
+						</a>
+						<div class="beggar"> <a href="javascript:;" class="rkgl">入库管理</a> <a href="javascript:;" class="ckgl">出库管理</a> <a href="javascript:;">物流管理</a> </div>
+					</li>
+					<li>
+						<a href="javascript:;"> <i class="appoint" subIndex="010"></i> <span>支付管理</span> <i class="irig"></i>
+							<div class="clear"></div>
+						</a>
+						<!--隐藏下拉-->
+						<div class="beggar"> <a href="javascript:;">规则管理</a> <a href="javascript:;" class="checkLink">返利管理</a> <a href="javascript:;">支付管理</a> </div>
+						<!--隐藏下拉-->
+					</li>
+					<li>
+						<a href="javascript:;"> <i class="arrival" subIndex="011"></i> <span>数据报表</span> <i class="irig"></i>
+							<div class="clear"></div>
+						</a>
+						<!--隐藏下拉-->
+						<div class="beggar"> <a href="javascript:;">销售报表</a> <a href="javascript:;" class="checkLink">供应商报表</a> </div>
+						<!--隐藏下拉-->
+					</li>
+					<li>
+						<a href="javascript:;"> <i class="astonish" subIndex="012"></i> <span>首页轮播</span> <i class="irig"></i>
+							<div class="clear"></div>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="clear"></div>
+			<!--  <div class="birthplace">
+          <ul>          
+          </ul>
+        </div>-->
+		</div>
+	</body>
+	<script type="text/javascript">
+		var _conIndex = -1;
+		var _gBindex;
+		$(function() {
+			//左边下拉菜单
+			var _subHeight, _subLength, _asubHeight, _pHeight;
+			var _aLink = $('.birthplace>ul>li>a');
+			_aLink.on('click', function() {
+				var _this = $(this);
+				//alert(_this.find('i').attr('subIndex'));
+				var _str = _this.find('i').attr('subIndex');
+				_this.find('i').eq(0).css('background', 'url(../../images/esys/' + _str + "-1" + '.png) left center no-repeat');
+				_this.find('.irig').css({
+					"background": "url(../../images/esys/up.png) right center no-repeat",
+					"background-position-y": "22px"
+				});
+				_this.find('span').css('color', '#e8a12e');
+				if(_conIndex == _this.parents('li').index()){
+					
+					return false;
+				}
+			
+				if (_conIndex > -1) {
+					$('.birthplace ul li').eq(_conIndex).find('i').eq(0).css('background', 'url(../../images/esys/' + _gBindex + '.png) left center no-repeat');
+					$('.birthplace ul li').eq(_conIndex).find('.irig').css({
+						"background": "url(../../images/esys/down.png) right center no-repeat",
+						"background-position-y": "22px"
+					});
+					$('.birthplace ul li').eq(_conIndex).find('span').css('color', '#323232');
+				}
+				_conIndex = _this.parents('li').index();
+				_gBindex = _str;
+			
+				//alert(_this.parents('li').index());
+				//alert("0"+"0"+(_conIndex+4));	
+				_this.addClass('adjust').parents('li').siblings().find('a').removeClass('adjust');
+				if (_this.parent('li').find('.beggar').length > 0) { //判读是否存在子菜单
+					_this.parent('li').addClass('attempt').siblings().removeClass('attempt');
+					_this.parent('li').find('.beggar').show().parents('li').siblings().find('.beggar').hide();
+					_subHeight = _this.parent('li').find('.beggar').find('a').eq(0).height();
+					_subLength = _this.parent('li').find('.beggar').find('a').length;
+					_asubHeight = _subHeight * _subLength;
+					$('.iframe_left', parent.document).height(548 + _asubHeight);
+					$('.bison-left').height(548 + _asubHeight);
+					//$('.iframe_left').height(548+_asubHeight);
+				} else {
+					$('.beggar').hide();
+					$('li').removeClass('attempt');
+					$('.iframe_left', parent.document).height(548);
+					$('.bison-left').height(548);
+					return false;
+				}
+				//alert(_pHeight)
+				//_conIndex=-1;
+
+			});
+    $('.beggar').find('a').on('click',function(){	
+    	$(this).addClass('checkLink').siblings().removeClass('checkLink');
+    })		
+  $('.ckgl').on('click',function(){	
+  	$(window.parent.document).find('.iframe').attr('src','ckgl.html');
+  })
+	  $('.rkgl').on('click',function(){	
+  	$(window.parent.document).find('.iframe').attr('src','rkgl.html')
+  })
+	$('.main_index').on('click',function(){
+	  	
+	  	$(window.parent.document).find('.iframe').attr('src','main.html')	
+	  })
+	$('.ddgl').on('click',function(){
+		
+	$(window.parent.document).find('.iframe').attr('src','ddgl.html')		
+	})
+	
+	$('.stgl').on('click',function(){	
+	$(window.parent.document).find('.iframe').attr('src','stgl.html');				
+	})
+
+})
+	</script>
+
+</html>

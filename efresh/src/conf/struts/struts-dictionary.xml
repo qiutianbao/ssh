@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="com.dolusoft.charge.dictionarySSS" extends="authority" namespace="/">
+
+		<!-- 增删改查 -->
+		<action name="*_Dictionary" class="DictionaryActions" method="{1}Dictionary">
+			<result type="json" />
+			<result name="error" type="json" />
+		</action>
+
+	</package>
+	<package name="dictionary" extends="authority" namespace="/dictionary">
+
+		<!-- 增删改查 -->
+		<action name="*_*" class="{2}Action" method="{1}{2}">
+			<result type="json" />
+			<result name="error" type="json" />
+		</action>
+
+	</package>
+
+</struts>    

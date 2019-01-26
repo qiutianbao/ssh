@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+
+	<package name="yinli" extends="struts-default,json-default" namespace="/">
+
+		<!-- 图文验证码 -->
+		<action name="Random_*"  class="randomAction"  method="{1}">
+			<result name="randCode" type="stream" >
+				<param name="contentType">image/jpeg</param>
+				<param name="inputName">inputStream</param>
+			</result>
+			<result name="check_code" type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+
+	</package>
+
+</struts>    

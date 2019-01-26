@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+	<package name="t_comp_info" namespace="/" extends="authority">
+		<action name="t_comp_info_*" class="t_comp_infoAction" method="{1}">
+			<result type="json"></result>
+		</action>
+		
+		<action name="comp_info_upload*" class="t_comp_infoAction" method="upload{1}">
+			<result type="json">
+				<param name="contentType">text/html;charset=utf-8</param> 
+			</result>
+		</action>
+
+	</package>
+</struts>

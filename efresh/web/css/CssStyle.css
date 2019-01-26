@@ -1,0 +1,175 @@
+.menu-show {
+    background-image: url("../images/icon/menu-show.gif") !important;
+}
+
+.user-delete {
+    background-image: url("../images/icon/user_delete.gif") !important;
+}
+
+.user {
+    background-image: url("../images/icon/user.gif") !important;
+}
+
+.user-add {
+    background-image: url("../images/icon/user_add.gif") !important;
+}
+
+.user-edit {
+    background-image: url("../images/icon/user_edit.png") !important;
+}
+
+.add {
+    background-image: url("../images/icon/add.gif") !important;
+}
+
+.delete {
+    background-image: url("../images/icon/delete.gif") !important;
+}
+
+.save {
+    background-image: url("../images/icon/save.gif") !important;
+}
+
+.edit {
+    background-image: url("../images/icon/edit.gif") !important;
+}
+
+.print {
+    background-image: url("../images/icon/print.gif") !important;
+}
+
+.accept {
+    background-image: url("../images/icon/accept.png") !important;
+}
+
+.form {
+    background-image: url("../images/icon/form.png") !important;
+}
+
+.manage {
+    background-image: url("../images/icon/manage.gif") !important;
+}
+
+.details {
+    background-image: url("../images/icon/details.gif") !important;
+}
+
+.reset {
+    background-image: url("../images/icon/reset.gif") !important;
+}
+
+.refresh {
+    background-image: url("../images/icon/refresh.gif") !important;
+}
+
+.close {
+    background-image: url("../images/icon/close.gif") !important;
+}
+
+.list-items {
+    background-image: url("../images/icon/list-items.gif") !important;
+}
+
+.yes {
+    background-image: url("../images/icon/yes.gif") !important;
+}
+
+.home {
+    background-image: url("../images/icon/home.gif") !important;
+}
+
+.help {
+    background-image: url("../images/icon/help.gif") !important;
+}
+
+.exit {
+    background-image: url("../images/icon/exit.gif") !important;
+}
+
+.building {
+    background-image: url("../images/icon/building.gif") !important;
+}
+
+.information {
+    background-image: url("../images/icon/information.gif") !important;
+}
+
+.monitor {
+    background-image: url("../images/icon/monitor.gif") !important;
+}
+
+.statistics {
+    background-image: url("../images/icon/statistics.gif") !important;
+}
+
+.secure {
+    background-image: url("../images/icon/secure.gif") !important;
+}
+
+.personal {
+    background-image: url("../images/icon/personal.gif") !important;
+}
+
+.role {
+    background-image: url("../images/icon/role.gif") !important;
+}
+
+.pit {
+    background-image: url("../images/icon/pit.gif") !important;
+}
+
+.search {
+    background-image: url("../images/icon/search.gif") !important;
+}
+
+.remove {
+    background-image: url("../images/icon/remove.gif") !important;
+}
+
+.export {
+    background-image: url("../images/icon/export.gif") !important;
+}
+
+.report {
+    background-image: url("../images/icon/report.gif") !important;
+}
+
+.parameter {
+    background-image: url("../images/icon/parameter.gif") !important;
+}
+
+body {
+    font: 12px verdana, arial, tahoma;
+}
+
+html, body {
+    border: 0 none;
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    width: 100%;
+}
+h2 {
+    color:#eee !important;
+    text-align:center;
+    background:#083772;
+    width:100%;
+}
+.docs-header {
+    background-color: #083772 !important;
+    padding: 5px;
+    color: white;
+}
+
+.api-title {
+    font-size: 18px;
+    float: left;
+}
+#bottom{
+	height:18px;
+	width:100%;
+	background-color:#FFFFFF;
+	overflow:hidden;
+	position:relative;
+}
