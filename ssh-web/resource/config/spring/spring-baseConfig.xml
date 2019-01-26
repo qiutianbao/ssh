@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:context="http://www.springframework.org/schema/context"
+             xmlns:aop="http://www.springframework.org/schema/aop"
+             xmlns:tx="http://www.springframework.org/schema/tx"
+             xsi:schemaLocation="http://www.springframework.org/schema/beans
+                     http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+                     http://www.springframework.org/schema/context
+                     http://www.springframework.org/schema/context/spring-context-3.0.xsd
+                     http://www.springframework.org/schema/aop
+                     http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+                     http://www.springframework.org/schema/tx
+                     http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
+
+    <!-- 打开注解模式 -->
+	<context:annotation-config/>
+    <!-- 扫描注解包 -->
+	<context:component-scan base-package="com.jxtb,com.cbd"/>
+	 <!-- JDBC参数配置 -->
+	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer" lazy-init="true">
+		<property name="systemPropertiesModeName" value="SYSTEM_PROPERTIES_MODE_OVERRIDE" />
+		<property name="ignoreResourceNotFound" value="true" />
+		<property name="locations">
+			<list>
+				<value>classpath:config/pro/jdbc.properties</value>
+			</list>
+		</property>
+	</bean>
+	
+	<!-- 配置数据源 -->
+	<bean id="dataSource"
+		class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close">
+		<property name="driverClassName"
+			value="${jdbc.driver}">
+		</property>
+		<property name="url" value="${jdbc.url}"/>
+		<property name="username" value="${jdbc.username}"/>
+		<property name="password" value="${jdbc.password}"/>
+        <!-- 数据连接池初始值-->
+        <property name="initialSize" value="${jdbc.initialSize}"/>
+        <!-- 数据连接池最大值 -->
+        <property name="maxActive" value="${jdbc.maxActive}"/>
+        <!-- 数据连接池 最大空闲值-->
+        <property name="maxIdle" value="${jdbc.maxIdle}"/>
+        <!-- 数据连接池 最小空闲值-->
+        <property name="minIdle" value="${jdbc.minIdle}"/>
+	</bean>
+	
+	<!-- 配置 sessionFactory -->
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+
+        <!--xml-->
+		<!--<property name="configLocation">-->
+			<!--<value>classpath:config/hibernate/hibernate.cfg.xml</value>-->
+		<!--</property>-->
+		
+		<property name="mappingResources">
+			<list>
+				<value>config/hibernate/hbm/User.hbm.xml</value>
+				<value>config/hibernate/hbm/Resource.hbm.xml</value>
+				<value>config/hibernate/hbm/Admin.hbm.xml</value>
+				<value>config/hibernate/hbm/Role.hbm.xml</value>
+				<value>config/hibernate/hbm/Enterprise.hbm.xml</value>
+				<value>config/hibernate/hbm/Product.hbm.xml</value>
+				<value>config/hibernate/hbm/AttestationInfo.hbm.xml</value>
+				<value>config/hibernate/hbm/ReddereIusInfo.hbm.xml</value>
+				<value>config/hibernate/hbm/CqValidateInfo.hbm.xml</value>
+			</list>
+		</property>
+		
+		<property name="hibernateProperties">
+			<value>
+                hibernate.dialect=${hibernate.dialect}
+                hibernate.hbm2ddl.auto=${hibernate.hbm2ddl.auto}
+                hibernate.show_sql=${hibernate.show_sql}
+                hibernate.format_sql=${hibernate.format_sql}
+                hibernate.cache.provider_class=${hibernate.cache.provider_class}
+                hibernate.cache.use_second_level_cache=${hibernate.cache.use_second_level_cache}
+                hibernate.cache.use_query_cache=${hibernate.cache.use_query_cache}
+			</value>
+		</property>
+	</bean>
+
+    <!-- 配置声明式事务  配置事务管理器-->
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory"/>
+		<property name="dataSource"><ref local="dataSource" /></property>
+	</bean>
+
+    <!--注解模式-->
+    <tx:annotation-driven transaction-manager="transactionManager" proxy-target-class="true"/>
+
+    <!--xml 方式-->
+	<tx:advice id="txAdvice" transaction-manager="transactionManager">
+	  <tx:attributes>
+          <tx:method name="save*" propagation="REQUIRED" rollback-for="java.lang.Exception"/>
+          <tx:method name="add*" propagation="REQUIRED" rollback-for="java.lang.Exception"/>
+          <tx:method name="create*" propagation="REQUIRED" rollback-for="java.lang.Exception"/>
+          <tx:method name="insert*" propagation="REQUIRED" rollback-for="java.lang.Exception"/>
+          <tx:method name="update*" propagation="REQUIRED" rollback-for="java.lang.Exception"/>
+          <tx:method name="merge*" propagation="REQUIRED" rollback-for="java.lang.Exception"/>
+          <tx:method name="delete*" propagation="REQUIRED" rollback-for="java.lang.Exception"/>
+          <tx:method name="del*" propagation="REQUIRED" rollback-for="java.lang.Exception"/>
+          <tx:method name="remove*" propagation="REQUIRED" rollback-for="java.lang.Exception"/>
+          <tx:method name="put*" propagation="REQUIRED" />
+          <tx:method name="use*" propagation="REQUIRED"/>
+          <!--hibernate4必须配置为开启事务 否则 getCurrentSession()获取不到-->
+          <tx:method name="get*" propagation="REQUIRED" read-only="true" />
+          <tx:method name="count*" propagation="REQUIRED" read-only="true" />
+          <tx:method name="find*" propagation="REQUIRED" read-only="true" />
+          <tx:method name="search*" propagation="REQUIRED" read-only="true" />
+          <tx:method name="list*" propagation="REQUIRED" read-only="true" />
+          <tx:method name="*" propagation="REQUIRED" read-only="true" rollback-for="java.lang.Exception"/>
+	  </tx:attributes>
+	</tx:advice>
+
+    <!-- 配置切点 -->
+	<aop:config>
+	   <aop:pointcut expression="execution(* com.cbd.service.impl.*.*(..))" id="bussinessService"/>
+        <aop:pointcut expression="execution(* com.jxtb.struts_two_xml.service.impl.*.*(..))" id="cut"/>
+	    <aop:advisor advice-ref="txAdvice" pointcut-ref="bussinessService"/>
+        <aop:advisor advice-ref="txAdvice" pointcut-ref="cut"/>
+	</aop:config>
+	
+
+	
+</beans>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.jxtb.struts_two_xml.entity.Questions" table="CBD_TB_QUESTIONS" schema="QUESTION">
+        <id name="id" type="java.lang.Long">
+            <column name="ID" precision="10" scale="0" />
+            <generator class="sequence">
+                <param name="sequence">sql_question</param>
+            </generator>
+        </id>
+        <property name="title" type="java.lang.String">
+            <column name="TITLE" length="100" not-null="true" />
+        </property>
+        <property name="detaildesc" type="java.lang.String">
+            <column name="DETAILDESC" length="300" />
+        </property>
+        <property name="answercount" type="java.lang.Long">
+            <column name="ANSWERCOUNT" precision="10" scale="0" not-null="true" />
+        </property>
+        <property name="lastmodified" type="java.util.Date">
+            <column name="LASTMODIFIED" length="7" not-null="true" />
+        </property>
+        <set name="answerses" inverse="true">
+            <key>
+                <column name="QID" precision="10" scale="0" />
+            </key>
+            <one-to-many class="com.jxtb.struts_two_xml.entity.Answers" />
+        </set>
+    </class>
+</hibernate-mapping>

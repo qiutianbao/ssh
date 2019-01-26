@@ -1,0 +1,52 @@
+/*数据表的样式*/
+.tableClass
+{
+  border-collapse:collapse;
+	border:1px solid #B1CEE7;
+	font-size:12px;
+}
+/*数据表的单元格样式*/
+.tableClass td
+{
+	border-collapse:collapse;
+	border:1px solid #B1CEE7;
+}
+/*数据表的标题行的样式*/
+.tableClass .tr
+{
+border-collapse:collapse;
+	border:1px solid #B1CEE7;
+	color:#2E5D7D;
+	background-image:url(../images/bg.gif)	;
+	text-align: center;
+
+}
+/*跳转页码输入框的样式*/
+.cls_input_short{
+	height:15px;
+	width:30px; 
+	border:1px solid #71c3ee;
+	margin-left:5px;
+	background-color:#F0F8FF;
+	font-size:10px;
+}
+/*分页按钮样式*/
+.imgClass
+{
+	cursor:pointer;
+}
+/*分页按钮所在层的样式*/
+#div_page
+{
+	width:800px;
+	height:20px;
+	
+}
+/*超链接样式*/
+.tableClass a:link {font-size:12px; text-decoration:none; color:#06527d;}
+.tableClass a:visited {font-size:12px; text-decoration:none; color:#06527d;}
+.tableClass a:hover {font-size:12px; text-decoration:underline; color:#FF0000;}
+
+.tableClass a.v1:link {font-size:12px; text-decoration:none; color:#000000;}
+.tableClass a.v1:visited {font-size:12px; text-decoration:none; color:#000000;}
+.tableClass a.v1:hover {font-size:12px; text-decoration:underline; color:#FF0000;}

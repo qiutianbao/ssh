@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class name="com.cbd.entity.Admin" table="tb_admin">
+    <id name="id">
+    <generator class="native">
+    </generator>
+    </id>
+    <property name="username"></property>
+    <property name="password"></property>
+    <property name="account"></property>
+    <property name="phone"></property>
+    <property name="area"></property>
+    <property name="address"></property>
+    <property name="flag"></property>
+    <set name="roleSet" table="admin_roles" lazy="false">
+      <key column="aid"></key>
+      <many-to-many class="com.cbd.entity.Role" column="rid"></many-to-many>
+    </set>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+<package name="adm" namespace="/" extends="struts-default">
+        <action name="adm_*" class="com.cbd.action.AdminAction" method="{1}">
+            <result name="index">/web/page/impower/admin/index.jsp</result>
+            <result name="showAdd">/web/page/impower/admin/showAdd.jsp</result>
+            <result name="showUpdate">/web/page/impower/admin/showUpdate.jsp</result>
+            <result name="login">/web/page/main/index.jsp</result>
+            <result name="error">/web/page/impower/admin/error.jsp</result>
+        </action>
+</package>
+</struts>

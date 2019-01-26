@@ -1,0 +1,49 @@
+10
+
+dir
+0
+http://svn.chinabigdata.com/svn/km/trunk/cbd.cfw/ssh-jxtb/test/com/jxtb/annotation/service
+http://svn.chinabigdata.com/svn/km
+add
+
+
+
+
+
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+ee90f93b-bdbe-2748-9624-9706d35861ce
+
+BookService.java
+file
+
+
+
+add
+
+BookUserService.java
+file
+
+
+
+add
+
+impl
+dir
+
+
+
+add
+

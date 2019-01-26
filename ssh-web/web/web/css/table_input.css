@@ -1,0 +1,24 @@
+#tab,#tab table
+{
+  border-collapse:collapse;
+	border:1px solid #B1CEE7;
+	
+}
+#tab tr,#tab table tr
+{
+border-collapse:collapse;
+	border:1px solid #B1CEE7;
+}
+
+#tab tr td,#tab table tr td
+{
+	border-collapse:collapse;
+	border:1px solid #B1CEE7;
+	height:20px;
+	align:right;
+}
+
+.form_td{
+ background-color:#CDE9FC;
+ width:15%;
+}

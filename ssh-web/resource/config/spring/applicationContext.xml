@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                     http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+
+   	<bean id="as" class="com.cbd.service.impl.AdminServiceImpl"/>
+    <bean id="rs" class="com.cbd.service.impl.ResourceServiceImpl"/>
+
+
+ <!--   &lt;!&ndash;xml test&ndash;&gt;
+    &lt;!&ndash; 分页工具类 &ndash;&gt;
+    <bean id="pageTool" class="com.jxtb.struts_two_xml.util.PageTool"/>
+    &lt;!&ndash; DAO &ndash;&gt;
+    <bean id="questionDao" class="com.jxtb.struts_two_xml.dao.impl.QuestionDaoImpl">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+    &lt;!&ndash; Service &ndash;&gt;
+    <bean id="questionService" class="com.jxtb.struts_two_xml.service.impl.QuestionServiceImpl">
+        <property name="questionDao" ref="questionDao"/>
+    </bean>
+    &lt;!&ndash; Action &ndash;&gt;
+    <bean id="questionAction" class="com.jxtb.struts_two_xml.action.QuestionAction">
+        <property name="questionService" ref="questionService"/>
+        <property name="pageTool" ref="pageTool" />
+    </bean>
+-->
+
+
+</beans>

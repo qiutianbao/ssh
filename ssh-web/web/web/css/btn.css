@@ -1,0 +1,24 @@
+.btn{
+width: 61px;
+	height: 21px;
+	line-height:21px;
+	border-width: 0px;
+	border-style:none;
+	padding: 0px;
+	font-size: 12px;
+	margin-right: 3px;
+	background: url(/BFinspect/web/images/btn.png) no-repeat 0 0;
+	cursor: pointer;
+}
+.btn_long{
+width: 100px;
+	height: 21px;
+	line-height:21px;
+	border-width: 0px;
+	border-style:none;
+	padding: 0px;
+	font-size: 12px;
+	margin-right: 3px;
+	background: url(/BFinspect/web/images/btn1.png) no-repeat 0 0;
+	cursor: pointer;
+}

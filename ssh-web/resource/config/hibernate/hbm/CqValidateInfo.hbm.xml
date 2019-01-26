@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class name="com.cbd.entity.CqValidateInfo" table="tb_validateInfo">
+    <id name="id">
+    <generator class="native"></generator>
+    </id>
+    <property name="validateNo"></property>
+    <property name="validateUserName"></property>
+    <property name="flag"></property>
+    <many-to-one name="product" column="pid" unique="true"></many-to-one>
+  </class>
+</hibernate-mapping>

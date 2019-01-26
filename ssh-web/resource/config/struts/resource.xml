@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+<package name="res" namespace="/" extends="struts-default">
+        <action name="res_*" class="com.cbd.action.ResourceAction" method="{1}">
+            <result name="index">/web/page/impower/resource/index.jsp</result>
+            <result name="showAdd">/web/page/impower/resource/showAdd.jsp</result>
+            <result name="showAdd2">/web/page/impower/resource/showAdd2.jsp</result>
+            <result name="showUpdate">/web/page/impower/resource/showUpdate.jsp</result>
+        </action>
+</package>
+</struts>

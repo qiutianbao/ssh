@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+
+    <constant name="struts.devMode" value="true"></constant>
+    <!--<package name="default" extends="struts-default" namespace="/">
+        &lt;!&ndash; 查询所有问题 &ndash;&gt;
+        <action name="findAll" class="questionAction" method="findAllQuestion">
+            <result name="findAll_succ">/jxtb/test/struts_two_xml/page/questionList.jsp</result>
+        </action>
+        &lt;!&ndash; 根据编号查询问题 &ndash;&gt;
+        <action name="questionById" class="questionAction" method="queryQuestionById">
+            <result name="find_succ">/jxtb/test/struts_two_xml/page/updateQuestion.jsp</result>
+        </action>
+        &lt;!&ndash; 保存新问题 &ndash;&gt;
+        <action name="addQuestion" class="questionAction" method="saveNewQuestion">
+            <result name="add_succ" type="redirectAction">findAll</result>
+            <result name="add_fail">/jxtb/test/struts_two_xml/page/addQuestion.jsp</result>
+        </action>
+        &lt;!&ndash; 删除问题 &ndash;&gt;
+        <action name="deleteQuestion" class="questionAction" method="deleteQuestions">
+            <result name="delete_succ" type="redirectAction">findAll</result>
+            <result name="delete_fail" >/jxtb/test/struts_two_xml/page/fail.jsp</result>
+        </action>
+        &lt;!&ndash; 修改问题 &ndash;&gt;
+        <action name="updateQuestion" class="questionAction" method="updateQuestions">
+            <result name="update_succ" type="redirectAction">findAll</result>
+            <result name="update_fail">/jxtb/test/struts_two_xml/page/updateQuestion.jsp</result>
+        </action>
+
+    </package>-->
+
+    <package name="demo" extends="struts-default" namespace="/">
+        <action name="customer_*" class="com.jxtb.one_to_many.action.CustomerAction" method="{1}">
+            <result name="list">/jsp/customer/list.jsp</result>
+        </action>
+    </package>
+
+</struts>

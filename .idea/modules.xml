@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/efresh/efresh.iml" filepath="$PROJECT_DIR$/efresh/efresh.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ssh-core/ssh-core.iml" filepath="$PROJECT_DIR$/ssh-core/ssh-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ssh-web/ssh-web.iml" filepath="$PROJECT_DIR$/ssh-web/ssh-web.iml" />
     </modules>
   </component>
 </project>

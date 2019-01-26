@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+    <package name="/" extends="struts-default" namespace="/">
+        <!-- 登录 -->
+        <action name="login" class="bookUserAction" method="bookUserLogin">
+            <result name="login_cuss" type="redirectAction">findAll</result>
+            <result name="login_fail">/jsp/jxtb/test/annotation/login.jsp</result>
+        </action>
+        <!-- 查询所有 -->
+        <action name="findAll" class="bookAction" method="findAllBook">
+            <result name="findAll_succ">/jsp/jxtb/test/annotation/bookList.jsp</result>
+        </action>
+        <!-- 根据编号查询会员信息 -->
+        <action name="findBookById" class="bookAction" method="findBookById">
+            <result name="findBookById_succ">jsp/jxtb/test/annotation/updateBook.jsp</result>
+        </action>
+        <!-- 添加信息 -->
+        <action name="addBook" class="bookAction" method="addBook">
+            <result name="addBook_succ" type="redirectAction">findAll</result>
+            <result name="addBook_fail" type="redirectAction">jsp/jxtb/test/annotation/addBook.jsp</result>
+        </action>
+
+        <!-- 修改信息 -->
+        <action name="updateBook" class="bookAction" method="updateBook">
+            <result name="updateBook_succ" type="redirectAction">findAll</result>
+            <result name="updateBook_fail" type="redirectAction">jsp/jxtb/test/annotation/updateBook.jsp</result>
+        </action>
+        <!-- 删除信息 -->
+        <action name="deleteBook" class="bookAction" method="deleteBook">
+            <result name="deleteBook_succ" type="redirectAction">findAll</result>
+            <result name="deleteBookm_fail" type="redirectAction">jsp/jxtb/test/annotation/error.jsp</result>
+        </action>
+    </package>
+</struts>

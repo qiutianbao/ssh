@@ -1,0 +1,12 @@
+.cls_scroll
+{
+overflow:scroll; 
+ scrollbar-face-color: #9EBFE8; 
+ scrollbar-shadow-color: #FFFFFF;
+  scrollbar-highlight-color: #FFFFFF; 
+  scrollbar-3dlight-color: #9EBFE8; 
+  scrollbar-darkshadow-color: #9EBFE8;
+   scrollbar-track-color: #FFFFFF; 
+scrollbar-arrow-color: #FFFFFF;
+ BACKGROUND-COLOR: transparent; 
+}

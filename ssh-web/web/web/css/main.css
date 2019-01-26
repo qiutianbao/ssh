@@ -1,0 +1,34 @@
+body{
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-color:#FFF;
+	font-size:12px;
+	}
+#content {
+	width:930px;
+	height:450px;
+	border-top:none;
+}
+#content-left {
+	width: 180px;
+	height: 580px;
+	float: left;
+	text-align:center;
+	
+}
+
+#content-right {
+	width: 630px;
+	height: 450px;
+	text-align: left;
+	padding-top:0px;
+	padding-left:0px;
+	float:left;
+	margin-left:0px;
+}
+
+.span label {
+	cursor: hand;
+}

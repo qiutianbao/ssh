@@ -1,0 +1,140 @@
+
+
+/*超链接样式*/
+a:link {font-size:12px; text-decoration:none; color:#06527d;}
+a:visited {font-size:12px; text-decoration:none; color:#06527d;}
+a:hover {font-size:12px; text-decoration:underline; color:#FF0000;}
+
+a.v1:link {font-size:12px; text-decoration:none; color:#000000;}
+a.v1:visited {font-size:12px; text-decoration:none; color:#000000;}
+a.v1:hover {font-size:12px; text-decoration:underline; color:#FF0000;}
+
+
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-color: #FFF;
+	font-size:12px;
+}
+
+/*短的按钮的样式*/
+.cls_button_short{
+width: 61px;
+	height: 21px;
+	line-height:21px;
+	border-width: 0px;
+	border-style:none;
+	padding: 0px;
+	font-size: 12px;
+	margin-right: 3px;
+	background: url(/BFinspect/web/images/btn.png) no-repeat 0 0;
+	cursor: pointer;
+}
+.cls_letter_style {color: #FFFFFF}
+/*长的按钮的样式*/
+.cls_button_long{
+background-image:url(/BFinspect/web/images/table/button_selects_long.gif);    
+	border:0px; 
+	width:80px; 
+	height:20px;
+}
+
+/*短的文本输入样式*/
+.cls_input_short{
+	height:12px;
+	width:20px; 
+	border:1px solid #71c3ee;
+	background-color:#F0F8FF;
+}
+.cls_input_short2{
+	height:20px;
+	width:50px; 
+	border:1px solid #71c3ee;
+	background-color:#F0F8FF;
+	margin-left:5px;
+}
+/*中等的文本输入样式*/
+.cls_input_middle{
+	height:20px;
+	width:100px; 
+	border:1px solid #71c3ee;
+	background-color:#F0F8FF;
+	margin-left:5px;
+	}
+/*长的输入样式*/
+.cls_input_long{
+	height:20px;
+	width:150px; 
+	border:1px solid #71c3ee;
+	background-color:#F0F8FF;
+	margin-left:5px;
+	}
+/*设置下拉框的样式*/
+.cls_select_short{
+	height:20px;
+	width:80px; 
+	border:1px solid #71c3ee;
+	margin-left:5px;
+	}
+	.cls_select_middle{
+	height:20px;
+	width:120px; 
+	border:1px solid #71c3ee;
+	margin-left:5px;
+	}
+/*设置文本域的大小*/
+.cls_textarea_short{
+	height:50px;
+	width:200px; 
+	border:1px solid #71c3ee;
+	}
+/*设置显示主文本的图片样式*/
+.titlebt {
+	font-size: 12px;
+	line-height: 26px;
+	font-weight: bold;
+	color: #000000;
+	background-image: url(../images/top_bt.jpg);
+	background-repeat: no-repeat;
+	display: block;
+	text-indent: 15px;
+	padding-top: 5px;
+}
+/*设置整个表格的样式*/
+.cls_table_fill{
+	background: #ffffff;
+}
+/*表格中使用到的背景图片路径*/
+#content_bg{background-image: url(/BFinspect/web/images/content-bg.gif);}
+#mail_leftbg{background-image: url(/BFinspect/web/images/mail_leftbg.gif;}
+#left-top-right{background-image: url(/BFinspect/web/images/left-top-right.gif;}
+
+
+/*超链接样式*/
+a:link {font-size:12px; text-decoration:none; color:#06527d;}
+a:visited {font-size:12px; text-decoration:none; color:#06527d;}
+a:hover {font-size:12px; text-decoration:underline; color:#FF0000;}
+
+a.v1:link {font-size:12px; text-decoration:none; color:#000000;}
+a.v1:visited {font-size:12px; text-decoration:none; color:#000000;}
+a.v1:hover {font-size:12px; text-decoration:underline; color:#FF0000;}
+
+
+
+#tab
+{
+  border-collapse:collapse;
+	border:1px solid #B1CEE7;
+}
+#tab td
+{
+	border-collapse:collapse;
+	border:1px solid #B1CEE7;
+}
+#tab tr
+{
+border-collapse:collapse;
+	border:1px solid #B1CEE7;
+}

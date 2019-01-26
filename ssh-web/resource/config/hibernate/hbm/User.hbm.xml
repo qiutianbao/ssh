@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class name="com.cbd.entity.User" table="tb_account">
+    <id name="id">
+    <generator class="native">
+    </generator>
+    </id>
+    <property name="uname"></property>
+    <property name="upwd"></property>
+  </class>
+</hibernate-mapping>

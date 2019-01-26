@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class name="com.cbd.entity.Role" table="tb_role">
+    <id name="id">
+    <generator class="native">
+    </generator>
+    </id>
+    <property name="name"></property>
+    <property name="value"></property>
+    
+    <set name="admins" table="admin_roles">
+      <key column="rid"></key>
+      <many-to-many class="com.cbd.entity.Admin" column="aid"></many-to-many>
+    </set>
+    
+    <set name="resourceSet" table="role_res" lazy="false">
+      <key column="rid"></key>
+      <many-to-many class="com.cbd.entity.Resource" column="resId"></many-to-many>
+    </set>
+    
+    <property name="flag"></property>
+  </class>
+</hibernate-mapping>
